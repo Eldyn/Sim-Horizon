@@ -1,0 +1,134 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "rl_menu",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "ui.rl_menu.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_BottomAction"
+						},
+						{
+							"translate": "ui.rl_menu.text"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.rl_menu.normal"
+								}
+							]
+						},
+						"commands": [
+							"/dialogue change @s rl_menu_normal @initiator"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.rl_menu.challenge"
+								}
+							]
+						},
+						"commands": [
+							"/dialogue change @s rl_menu_challenge @initiator"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "rl_menu_challenge",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "ui.rl_menu_challenge.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_BottomAction"
+						},
+						{
+							"translate": "ui.rl_menu_challenge.text"
+						}
+					]
+				}
+			},
+			{
+				"scene_tag": "rl_menu_normal",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "ui.rl_menu_normal.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_BottomAction"
+						},
+						{
+							"translate": "ui.rl_menu_normal.text"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "difficulty.easy"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ tag @a[r=1] add rl_joining",
+							"/execute @e[type=cr:cmd,name=rl_generator] ~~~ function rl/easy/make_game"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "difficulty.normal"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ tag @a[r=1] add rl_joining",
+							"/execute @e[type=cr:cmd,name=rl_generator] ~~~ function rl/normal/make_game"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "difficulty.hard"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ tag @a[r=1] add rl_joining",
+							"/execute @e[type=cr:cmd,name=rl_generator] ~~~ function rl/hard/make_game"
+						]
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "travel_1",
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_BottomAction"
+						},
+						{
+							"translate": "ui.teleporter_text"
+						}
+					]
+				},
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "ui.teleporter_name"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": "Hub",
+						"commands": [
+							"/execute @initiator ~ ~ ~ function tp/hub"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "location.mine"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function tp/mine"
+						]
+					},
+					{
+						"name": "Minigames",
+						"commands": [
+							"/execute @initiator ~ ~ ~ function tp/minigames"
+						]
+					},
+					{
+						"name": "Pit",
+						"commands": [
+							"/execute @initiator ~ ~ ~ function tp/pit"
+						]
+					}
+				]
+			}
+		]
+	}
+}

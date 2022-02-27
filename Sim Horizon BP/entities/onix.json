@@ -1,0 +1,50 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cr:onix",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:health": {
+				"value": 1
+			},
+			"minecraft:npc": {},
+			"minecraft:physics": {},
+			"minecraft:nameable": {
+				"always_show": false,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:collision_box": {
+				"height": 2,
+				"width": 0.85
+			},
+			"minecraft:interact": {
+				"interactions": {
+					"on_interact": {
+						"event": "interact"
+					}
+				}
+			}
+		},
+		"events": {
+			"interact": {
+				"run_command": {
+					"target": "other",
+					"command": [
+						"dialogue open @e[c=1,type=cr:onix] @s onix_hub"
+					]
+				}
+			}
+		}
+	}
+}

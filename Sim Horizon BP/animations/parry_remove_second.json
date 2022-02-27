@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.parry_remove_second": {
+			"timeline": {
+				"0.0": [
+					"/particle cr:parry ~~~",
+					"/playsound mob.irongolem.hit @a[r=6] ~~~ 1 1 1"
+				],
+				"1.0": [
+					"@s remove_parry"
+				]
+			},
+			"animation_length": 1.1
+		},
+		"animation.parry_remove": {
+			"timeline": {
+				"0.1": [
+					"@s blue_knight_cd",
+					"/scoreboard players set @s pit_cooldown 20"
+				]
+			},
+			"animation_length": 0.2
+		}
+	}
+}

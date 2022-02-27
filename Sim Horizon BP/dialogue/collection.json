@@ -1,0 +1,44 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "collection",
+				"npc_name": "Collezione",
+				"text": {
+					"rawtext": [
+						{
+							"text": ""
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": "§3Comuni",
+						"commands": [
+							"/execute @initiator ~~~ function collection/summon_c"
+						]
+					},
+					{
+						"name": "§gRare",
+						"commands": [
+							"/execute @initiator ~~~ function collection/summon_r"
+						]
+					},
+					{
+						"name": "§dEpiche",
+						"commands": [
+							"/execute @initiator ~~~ function collection/summon_e"
+						]
+					},
+					{
+						"name": "§fLeggendarie",
+						"commands": [
+							"/execute @initiator ~~~ function collection/summon_l"
+						]
+					}
+				]
+			}
+		]
+	}
+}

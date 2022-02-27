@@ -1,0 +1,166 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "horion_hub",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "§f§lHorion"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_MainScreen"
+						},
+						{
+							"translate": "ui.horion.hub"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.horion.button.about"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:horion,c=1] @s horion_about"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.horion.button.skin"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:horion,c=1] @s horion_skin"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.horion.button.about"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:horion,c=1] @s horion_about"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.horion.button.about_spamton"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:horion,c=1] @s horion_about_spamton"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.horion.button.quit"
+								}
+							]
+						},
+						"commands": []
+					}
+				]
+			},
+			{
+				"scene_tag": "horion_about",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "§f§lHorion"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_FullScreen"
+						},
+						{
+							"translate": "ui.horion.about"
+						},
+						{
+							"text": "\n"
+						},
+						{
+							"translate": "ui.horion.about1"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_hub"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "horion_about_spamton",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "§f§lHorion"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_FullScreen"
+						},
+						{
+							"translate": "ui.horion.about_spamton"
+						},
+						{
+							"with": [
+								"\n"
+							]
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_hub"
+						]
+					}
+				]
+			}
+		]
+	}
+}

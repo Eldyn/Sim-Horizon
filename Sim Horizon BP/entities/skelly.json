@@ -1,0 +1,152 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cr:skelly",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"blue": {
+				"minecraft:type_family": {
+					"family": [
+						"bt",
+						"troop"
+					]
+				},
+				"minecraft:behavior.melee_attack": {
+					"priority": 4,
+					"track_target": true,
+					"speed_multiplier": 1.25,
+					"melee_fov": 360
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_see": true,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "r_tow"
+							},
+							"max_dist": 150
+						},
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "rt"
+							},
+							"max_dist": 150
+						}
+					]
+				}
+			},
+			"red": {
+				"minecraft:type_family": {
+					"family": [
+						"rt",
+						"troop"
+					]
+				},
+				"minecraft:behavior.melee_attack": {
+					"priority": 4,
+					"track_target": true,
+					"speed_multiplier": 1.25,
+					"melee_fov": 360
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_see": true,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "b_tow"
+							},
+							"max_dist": 150
+						},
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "bt"
+							},
+							"max_dist": 150
+						}
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:nameable": {},
+			"minecraft:health": {
+				"value": 50,
+				"max": 50
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 2
+			},
+			"minecraft:attack": {
+				"damage": 2,
+				"effect_duration": 10
+			},
+			"minecraft:movement": {
+				"value": 0.2
+			},
+			"minecraft:navigation.walk": {
+				"is_amphibious": true,
+				"avoid_water": true,
+				"can_jump": false,
+				"can_path_over_water": false
+			},
+			"minecraft:movement.basic": {
+				"max_turn": 360
+			},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.random_look_around": {
+				"priority": 8
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:scale": {
+				"value": 0.6
+			},
+			"minecraft:behavior.avoid_block": {
+				"priority": 3,
+				"target_blocks": [
+					"minecraft:water",
+					"minecraft:flowing_water"
+				]
+			}
+		},
+		"events": {
+			"blue": {
+				"add": {
+					"component_groups": [
+						"blue"
+					]
+				}
+			},
+			"red": {
+				"add": {
+					"component_groups": [
+						"red"
+					]
+				}
+			}
+		}
+	}
+}

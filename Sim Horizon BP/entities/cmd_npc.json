@@ -1,0 +1,33 @@
+{
+	"format_version": "1.17.30",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cr:cmd_npc",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:health": {
+				"max": 1,
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:npc": {},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true,
+				"always_show": false
+			}
+		},
+		"events": {}
+	}
+}

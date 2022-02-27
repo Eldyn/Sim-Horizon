@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.parry": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"stop_parry"
+					],
+					"on_entry": [
+						"@s remove_parry"
+					],
+					"transitions": [
+						{
+							"parry_mode": "query.is_sneaking&&q.mark_variant==11"
+						}
+					]
+				},
+				"parry_mode": {
+					"on_entry": [
+						"@s add_parry"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_sneaking"
+						}
+					],
+					"animations": [
+						"parry_remove_second"
+					]
+				}
+			}
+		}
+	}
+}

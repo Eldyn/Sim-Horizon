@@ -1,0 +1,27 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.tower_attack": {
+			"initial_state": "default",
+			"states": {
+				"attacking": {
+					"on_entry": [
+						"/playanimation @e[c=1,type=cr:tower] animation.tower.attack"
+					],
+					"transitions": [
+						{
+							"default": "variable.attack_time<0"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"attacking": "variable.attack_time>=0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

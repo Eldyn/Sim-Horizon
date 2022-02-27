@@ -1,0 +1,202 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "stats_mine",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "ui.stats.mine"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_StatsScreen"
+						},
+						{
+							"translate": "ui.stats.mine_dig"
+						},
+						{
+							"score": {
+								"objective": "s_mine_dig",
+								"name": "@s"
+							}
+						},
+						{
+							"text": "\n"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§r"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:cmd_npc,c=1] @s stats_mine"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.button.exit"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§l>"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:cmd_npc,c=1] @s stats_pit"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "stats_pit",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "ui.stats.pit"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_StatsScreen"
+						},
+						{
+							"translate": "ui.stats.mine_dig"
+						},
+						{
+							"score": {
+								"objective": "s_mine_dig",
+								"name": "@s"
+							}
+						},
+						{
+							"text": "\n"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§l<"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:cmd_npc,c=1] @s stats_mine"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.button.exit"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§l>"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:cmd_npc,c=1] @s stats_roguelike"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "stats_roguelike",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "ui.stats.roguelike"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "NPC_StatsScreen"
+						},
+						{
+							"translate": "ui.stats.mine_dig"
+						},
+						{
+							"score": {
+								"objective": "s_mine_dig",
+								"name": "@s"
+							}
+						},
+						{
+							"text": "\n"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§l<"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:cmd_npc,c=1] @s stats_pit"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "ui.button.exit"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§r"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:cmd_npc,c=1] @s stats_roguelike"
+						]
+					}
+				]
+			}
+		]
+	}
+}

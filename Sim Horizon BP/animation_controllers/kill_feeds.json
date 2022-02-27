@@ -1,0 +1,52 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.kill": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"kill": "query.variant==101"
+						}
+					],
+					"on_entry": [
+						"@s removekill"
+					]
+				},
+				"kill": {
+					"transitions": [
+						{
+							"default": "query.variant!=101"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s temp_kill 1",
+						"@s removekill"
+					]
+				}
+			}
+		},
+		"controller.animation.on_death": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"dead": "!query.is_alive"
+						}
+					]
+				},
+				"dead": {
+					"on_entry": [
+						"/scoreboard players add @s temp_dead 1"
+					],
+					"transitions": [
+						{
+							"default": "query.is_alive"
+						}
+					]
+				}
+			}
+		}
+	}
+}

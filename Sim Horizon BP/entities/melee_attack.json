@@ -1,0 +1,61 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cr:melee_attack",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"blue": {
+				"minecraft:type_family": {
+					"family": [
+						"bt"
+					]
+				}
+			},
+			"red": {
+				"minecraft:type_family": {
+					"family": [
+						"rt"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:projectile": {
+				"gravity": 0,
+				"catch_fire": false,
+				"power": 0.5,
+				"on_hit": {
+					"impact_damage": {
+						"damage": 25,
+						"destroy_on_hit": true
+					}
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"attack_melee"
+				]
+			}
+		},
+		"events": {
+			"blue": {
+				"add": {
+					"component_groups": [
+						"blue"
+					]
+				}
+			},
+			"red": {
+				"add": {
+					"component_groups": [
+						"red"
+					]
+				}
+			}
+		}
+	}
+}

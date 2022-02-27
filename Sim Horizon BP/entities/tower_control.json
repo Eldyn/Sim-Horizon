@@ -1,0 +1,166 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cr:tower_control",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"attack": "controller.animation.tower_attack"
+			},
+			"scripts": {
+				"animate": [
+					"attack"
+				]
+			}
+		},
+		"component_groups": {
+			"blue_side": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"b_tow"
+					]
+				},
+				"minecraft:shooter": {
+					"def": "cr:cannonball"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"attack_interval": 1,
+					"attack_radius": 10,
+					"priority": 0,
+					"ranged_fov": 360
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 0,
+					"within_radius": 10,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"subject": "other",
+								"test": "is_family",
+								"value": "rt"
+							},
+							"max_dist": 7
+						}
+					],
+					"must_see": true,
+					"must_reach": false
+				}
+			},
+			"red_side": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:shooter": {
+					"def": "cr:cannonball"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"attack_interval": 1,
+					"attack_radius": 8,
+					"priority": 0,
+					"ranged_fov": 360
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 0,
+					"within_radius": 8,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "bt"
+							},
+							"max_dist": 7
+						}
+					],
+					"must_see": true
+				},
+				"minecraft:type_family": {
+					"family": [
+						"r_tow"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:shooter": {
+				"def": "cr:cannonball"
+			},
+			"minecraft:navigation.generic": {},
+			"minecraft:movement.generic": {},
+			"minecraft:behavior.ranged_attack": {
+				"attack_interval": 1,
+				"attack_radius": 8,
+				"priority": 0,
+				"ranged_fov": 360
+			},
+			"minecraft:burns_in_daylight": false,
+			"minecraft:health": {
+				"value": 3500,
+				"max": 3500
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"pivot": [
+							0,
+							0,
+							0
+						],
+						"height": 5,
+						"width": 5
+					}
+				]
+			},
+			"minecraft:breathable": {
+				"breathe_blocks": [
+					"barrier"
+				],
+				"breathes_air": true
+			},
+			"minecraft:movement": {
+				"max": 0,
+				"value": 0
+			}
+		},
+		"events": {
+			"blue_tow": {
+				"add": {
+					"component_groups": [
+						"blue_side"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"red_side"
+					]
+				}
+			},
+			"red_tow": {
+				"add": {
+					"component_groups": [
+						"red_side"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"blue_side"
+					]
+				}
+			}
+		}
+	}
+}

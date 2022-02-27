@@ -1,0 +1,47 @@
+{
+	"format_version": "1.17",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "crate",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "crate.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "crate.text"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "crate.open"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function crates/click_open"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "crate.close"
+								}
+							]
+						}
+					}
+				]
+			}
+		]
+	}
+}

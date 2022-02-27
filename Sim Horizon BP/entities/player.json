@@ -1,0 +1,419 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "minecraft:player",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"animations": {
+				"kill_feed": "controller.animation.kill",
+				"on_death": "controller.animation.on_death",
+				"parry": "controller.animation.parry",
+				"parry_remove_second": "animation.parry_remove_second",
+				"stop_parry": "animation.parry_remove"
+			},
+			"scripts": {
+				"animate": [
+					"kill_feed",
+					"on_death",
+					"parry"
+				]
+			}
+		},
+		"component_groups": {
+			"blue_knight_cd_ready": {
+				"minecraft:mark_variant": {
+					"value": 11
+				}
+			},
+			"blue_knight_cd": {
+				"minecraft:mark_variant": {
+					"value": 10
+				}
+			},
+			"pit_components": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": [
+						1,
+						1
+					],
+					"time_down_event": {
+						"event": "cooldown_pit",
+						"target": "self"
+					}
+				}
+			},
+			"kill_sensor": {
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "fatal"
+								},
+								"target": "other",
+								"event": "kill"
+							},
+							"deals_damage": true
+						}
+					]
+				}
+			},
+			"parry": {
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"cause": "entity_attack",
+							"deals_damage": false,
+							"on_damage": {
+								"filters": {
+									"subject": "other",
+									"test": "is_family",
+									"value": "player"
+								},
+								"event": "parry_damage",
+								"target": "other"
+							}
+						},
+						{
+							"cause": "entity_attack",
+							"deals_damage": false,
+							"on_damage": {
+								"event": "remove_parry",
+								"target": "self"
+							}
+						}
+					]
+				}
+			},
+			"normal": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"kill": {
+				"minecraft:variant": {
+					"value": 101
+				}
+			},
+			"minecraft:add_bad_omen": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"effect": "bad_omen",
+							"duration": 6000,
+							"display_on_screen_animation": true
+						}
+					]
+				},
+				"minecraft:timer": {
+					"time": [
+						0,
+						0
+					],
+					"looping": false,
+					"time_down_event": {
+						"event": "minecraft:clear_add_bad_omen",
+						"target": "self"
+					}
+				}
+			},
+			"minecraft:clear_bad_omen_spell_effect": {
+				"minecraft:spell_effects": {}
+			},
+			"minecraft:raid_trigger": {
+				"minecraft:raid_trigger": {
+					"triggered_event": {
+						"event": "minecraft:remove_raid_trigger",
+						"target": "self"
+					}
+				},
+				"minecraft:spell_effects": {
+					"remove_effects": "bad_omen"
+				}
+			}
+		},
+		"components": {
+			"minecraft:experience_reward": {
+				"on_death": "math.min(query.player_level*7,100)"
+			},
+			"minecraft:type_family": {
+				"family": [
+					"player"
+				]
+			},
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:can_climb": {},
+			"minecraft:movement": {
+				"value": 0.1
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": {
+								"test": "has_damage",
+								"subject": "self",
+								"value": "fatal"
+							},
+							"target": "other",
+							"event": "kill"
+						},
+						"deals_damage": true
+					}
+				]
+			},
+			"minecraft:attack": {
+				"damage": 1
+			},
+			"minecraft:player.saturation": {
+				"value": 20,
+				"min": 20
+			},
+			"minecraft:player.exhaustion": {
+				"value": 0,
+				"max": 4
+			},
+			"minecraft:player.level": {
+				"value": 0,
+				"max": 24791
+			},
+			"minecraft:player.experience": {
+				"value": 0,
+				"max": 1
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": -1,
+				"inhale_time": 3.75,
+				"generates_bubbles": false
+			},
+			"minecraft:nameable": {
+				"always_show": true,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:insomnia": {
+				"days_until_insomnia": 3
+			},
+			"minecraft:rideable": {
+				"seat_count": 2,
+				"family_types": [
+					"parrot_tame"
+				],
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0.4,
+							-0.2,
+							-0.1
+						],
+						"min_rider_count": 0,
+						"max_rider_count": 0,
+						"lock_rider_rotation": 0
+					},
+					{
+						"position": [
+							-0.4,
+							-0.2,
+							-0.1
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2,
+						"lock_rider_rotation": 0
+					}
+				]
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:scaffolding_climber": {},
+			"minecraft:environment_sensor": {
+				"triggers": {
+					"filters": {
+						"all_of": [
+							{
+								"test": "has_mob_effect",
+								"subject": "self",
+								"value": "bad_omen"
+							},
+							{
+								"test": "is_in_village",
+								"subject": "self",
+								"value": true
+							}
+						]
+					},
+					"event": "minecraft:trigger_raid"
+				}
+			}
+		},
+		"events": {
+			"blue_knight_cd": {
+				"remove": {
+					"component_groups": [
+						"blue_knight_cd_ready"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"blue_knight_cd"
+					]
+				}
+			},
+			"blue_knight_ready": {
+				"add": {
+					"component_groups": [
+						"blue_knight_cd_ready"
+					]
+				},
+				"run_command": {
+					"command": [
+						"execute @s function general_reset"
+					]
+				}
+			},
+			"join_hub": {
+				"remove": {
+					"component_groups": [
+						"pit_components"
+					]
+				}
+			},
+			"join_pit": {
+				"add": {
+					"component_groups": [
+						"pit_components"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"kill_sensor"
+					]
+				},
+				"run_command": {
+					"command": [
+						"tag @s add join"
+					]
+				}
+			},
+			"parry_damage": {
+				"run_command": {
+					"command": [
+						"effect @s instant_damage 1 0 true",
+						"playsound random.glass @a[r=7] ~ ~ ~ 1 0.35 1",
+						"execute @s ^ ^ ^4 event entity @p remove_parry"
+					]
+				}
+			},
+			"add_parry": {
+				"add": {
+					"component_groups": [
+						"parry"
+					]
+				}
+			},
+			"remove_parry": {
+				"remove": {
+					"component_groups": [
+						"parry"
+					]
+				}
+			},
+			"kill": {
+				"add": {
+					"component_groups": [
+						"kill"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"normal"
+					]
+				}
+			},
+			"removekill": {
+				"remove": {
+					"component_groups": [
+						"kill"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"normal"
+					]
+				}
+			},
+			"minecraft:gain_bad_omen": {
+				"add": {
+					"component_groups": [
+						"minecraft:add_bad_omen"
+					]
+				}
+			},
+			"minecraft:clear_add_bad_omen": {
+				"remove": {
+					"component_groups": [
+						"minecraft:add_bad_omen"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"minecraft:clear_bad_omen_spell_effect"
+					]
+				}
+			},
+			"minecraft:trigger_raid": {
+				"add": {
+					"component_groups": [
+						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"minecraft:remove_raid_trigger": {
+				"remove": {
+					"component_groups": [
+						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"cooldown_pit": {
+				"run_command": {
+					"command": [
+						"execute @s ~~~ function pit/second"
+					]
+				}
+			}
+		}
+	}
+}

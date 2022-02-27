@@ -1,0 +1,82 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cr:tower",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"blue_side": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"red_side": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:burns_in_daylight": false,
+			"minecraft:health": {
+				"value": 4000,
+				"max": 4000
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"pivot": [
+							0,
+							2,
+							0
+						],
+						"height": 4,
+						"width": 4
+					}
+				]
+			}
+		},
+		"events": {
+			"blue_tow": {
+				"add": {
+					"component_groups": [
+						"blue_side"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"red_side"
+					]
+				}
+			},
+			"red_tow": {
+				"add": {
+					"component_groups": [
+						"red_side"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"blue_side"
+					]
+				}
+			}
+		}
+	}
+}

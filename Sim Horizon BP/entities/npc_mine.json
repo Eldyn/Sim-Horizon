@@ -1,0 +1,55 @@
+{
+	"format_version": "1.17.30",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cr:mine_npc",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:health": {
+				"max": 1,
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:npc": {},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:interact": {
+				"interactions": {
+					"on_interact": {
+						"event": "dialogue",
+						"target": "other"
+					}
+				}
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true,
+				"always_show": false
+			},
+			"minecraft:collision_box": {
+				"height": 2,
+				"width": 1
+			}
+		},
+		"events": {
+			"dialogue": {
+				"run_command": {
+					"command": [
+						"dialogue open @e[type=cr:mine_npc,c=1] @s[scores={i_mine_pickaxe=-2000}] roll_pickaxe",
+						"dialogue open @e[type=cr:mine_npc,c=1] @s[scores={i_mine_pickaxe=0..}] roll_pickaxe_pay"
+					],
+					"target": "player"
+				}
+			}
+		}
+	}
+}
