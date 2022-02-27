@@ -1,0 +1,123 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:pickaxe_galv2",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l1')"
+						},
+						"on_dig": {
+							"event": "galvanize",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l2')"
+						},
+						"on_dig": {
+							"event": "galvanize",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 6,
+						"block": {
+							"tags": "query.any_tag('cr:l3')"
+						},
+						"on_dig": {
+							"event": "galvanize",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l4')"
+						},
+						"on_dig": {
+							"event": "galvanize",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 100,
+						"block": "cr:mattoni",
+						"on_dig": {
+							"event": "galvanize",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:icon": {
+				"texture": "pick_cobalt"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					},
+					"third_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					}
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "Piccone Galvanizzato 2"
+			},
+			"minecraft:enchantable": {
+				"slot": "pickaxe"
+			},
+			"tag:cr:pickaxe": {}
+		},
+		"events": {
+			"galvanize": {
+				"randomize": [
+					{
+						"weight": 1,
+						"run_command": {
+							"target": "self",
+							"command": [
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:l2 0 replace cr:l1",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:l3 0 replace cr:l2",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:l4 0 replace cr:l3",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l2_com1 0 replace cr:mine_l1_com1",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l2_com2 0 replace cr:mine_l1_com2",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l2_rare 0 replace cr:mine_l1_rare",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l3_com1 0 replace cr:mine_l2_com1",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l3_com2 0 replace cr:mine_l2_com2",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l3_rare 0 replace cr:mine_l2_rare",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l4_com1 0 replace cr:mine_l3_com1",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l4_com2 0 replace cr:mine_l3_com2",
+								"fill ~3 ~3 ~3 ~-3 ~-3 ~-3 cr:mine_l4_rare 0 replace cr:mine_l3_rare"
+							]
+						}
+					},
+					{
+						"weight": 20
+					}
+				]
+			}
+		}
+	}
+}

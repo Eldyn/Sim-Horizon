@@ -1,0 +1,101 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:pickaxe_c_niceone",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"speed": 16,
+						"block": {
+							"tags": "query.any_tag('cr:l1')"
+						},
+						"on_dig": {
+							"event": "mend",
+							"target": "holder"
+						}
+					},
+					{
+						"speed": 16,
+						"block": {
+							"tags": "query.any_tag('cr:l2')"
+						},
+						"on_dig": {
+							"event": "mend",
+							"target": "holder"
+						}
+					},
+					{
+						"speed": 16,
+						"block": {
+							"tags": "query.any_tag('cr:l3')"
+						},
+						"on_dig": {
+							"event": "mend",
+							"target": "holder"
+						}
+					},
+					{
+						"speed": 16,
+						"block": {
+							"tags": "query.any_tag('cr:l4')"
+						},
+						"on_dig": {
+							"event": "mend",
+							"target": "holder"
+						}
+					}
+				]
+			},
+			"minecraft:icon": {
+				"texture": "pick_cobalt"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					},
+					"third_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					}
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "The Nice One\nEfficiency III\nEncrypting II\nUbreaking III"
+			},
+			"tag:cr:pickaxe": {}
+		},
+		"events": {
+			"mend": {
+				"randomize": [
+					{
+						"weight": 1,
+						"run_command": {
+							"target": "self",
+							"command": [
+								"scoreboard players add @s mine_damage 2"
+							]
+						}
+					},
+					{
+						"weight": 5
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"format_version": "1.17",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sp:rps_paper"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "paper"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 1,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "sp:rps_c_rock",
+					"target": "self"
+				}
+			},
+			"minecraft:display_name": {
+				"value": "-§l§eCarta§r§f-"
+			}
+		},
+		"events": {
+			"sp:rps_c_rock": {
+				"run_command": {
+					"command": [
+						"scoreboard players set @s rps_card 2",
+						"tellraw @s {\"rawtext\":[{\"text\":\"§f§l-§r §bHai selezionato §lCARTA §r§f§l-§r\"}]}"
+					],
+					"target": "self"
+				}
+			}
+		}
+	}
+}

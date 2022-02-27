@@ -1,0 +1,33 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:traveler",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "traveler"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "usee"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "elatio",
+				"duration": 3
+			}
+		},
+		"events": {
+			"usee": {
+				"run_command": {
+					"target": "holder",
+					"command": [
+						"dialogue open @e[type=cr:cmd_npc,c=1] @s travel_1"
+					]
+				}
+			}
+		}
+	}
+}

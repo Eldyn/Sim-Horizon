@@ -1,0 +1,112 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:pickaxe_overclock2",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l1')"
+						},
+						"on_dig": {
+							"event": "overclock",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l2')"
+						},
+						"on_dig": {
+							"event": "overclock",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 6,
+						"block": {
+							"tags": "query.any_tag('cr:l3')"
+						},
+						"on_dig": {
+							"event": "overclock",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l4')"
+						},
+						"on_dig": {
+							"event": "overclock",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 100,
+						"block": "cr:mattoni",
+						"on_dig": {
+							"event": "overclock",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:icon": {
+				"texture": "pick_cobalt"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					},
+					"third_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					}
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "Piccone Overclock"
+			},
+			"minecraft:enchantable": {
+				"slot": "pickaxe"
+			},
+			"tag:cr:pickaxe": {}
+		},
+		"events": {
+			"overclock": {
+				"randomize": [
+					{
+						"weight": 1,
+						"run_command": {
+							"target": "self",
+							"command": [
+								"function mine/enchants/overclock"
+							]
+						}
+					},
+					{
+						"weight": 9
+					}
+				]
+			}
+		}
+	}
+}

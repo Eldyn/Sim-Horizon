@@ -1,0 +1,188 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:pickaxe_c_poseidon",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"speed": 16,
+						"block": "cr:mine_l1_rare",
+						"on_dig": {
+							"event": "l1_rare",
+							"target": "holder"
+						}
+					},
+					{
+						"speed": 16,
+						"block": "cr:mine_l2_rare",
+						"on_dig": {
+							"event": "l2_rare",
+							"target": "holder"
+						}
+					},
+					{
+						"speed": 16,
+						"block": "cr:mine_l3_rare",
+						"on_dig": {
+							"event": "l3_rare",
+							"target": "holder"
+						}
+					},
+					{
+						"speed": 16,
+						"block": "cr:mine_l4_rare",
+						"on_dig": {
+							"event": "l4_rare",
+							"target": "holder"
+						}
+					},
+					{
+						"speed": 16,
+						"block": {
+							"tags": "query.any_tag('cr:l1')"
+						},
+						"on_dig": {
+							"event": "gold",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 16,
+						"block": {
+							"tags": "query.any_tag('cr:l2')"
+						},
+						"on_dig": {
+							"event": "gold",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 16,
+						"block": {
+							"tags": "query.any_tag('cr:l3')"
+						},
+						"on_dig": {
+							"event": "gold",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 16,
+						"block": {
+							"tags": "query.any_tag('cr:l4')"
+						},
+						"on_dig": {
+							"event": "gold",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 20,
+						"block": "cr:oro"
+					}
+				]
+			},
+			"minecraft:icon": {
+				"texture": "pick_cobalt"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					},
+					"third_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					}
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "Poseidon\nEfficiency III\n4tuna III\nRoyal"
+			},
+			"minecraft:enchantable": {
+				"slot": "pickaxe"
+			},
+			"tag:cr:pickaxe": {}
+		},
+		"events": {
+			"gold": {
+				"randomize": [
+					{
+						"weight": 1,
+						"run_command": {
+							"target": "self",
+							"command": [
+								"summon cr:fortuna ~ ~ ~ level_3"
+							]
+						}
+					},
+					{
+						"weight": 50
+					}
+				]
+			},
+			"l1_rare": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"scoreboard players add temp vars 1",
+						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
+						"titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
+						"titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f KiloByte\"}]}",
+						"scoreboard players add @s bal_mine 1"
+					]
+				}
+			},
+			"l2_rare": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"scoreboard players add temp vars 2",
+						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
+						"titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
+						"titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f KiloByte\"}]}",
+						"scoreboard players add @s bal_mine 2"
+					]
+				}
+			},
+			"l3_rare": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"scoreboard players add temp vars 3",
+						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
+						"titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
+						"titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f KiloByte\"}]}",
+						"scoreboard players add @s bal_mine 3"
+					]
+				}
+			},
+			"l4_rare": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"scoreboard players add temp vars 4",
+						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
+						"titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
+						"titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f KiloByte\"}]}",
+						"scoreboard players add @s bal_mine 4"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:rl_control",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "rl_control"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "usee"
+				}
+			}
+		},
+		"events": {
+			"usee": {
+				"run_command": {
+					"command": [
+						"dialogue open @e[type=cr:cmd_npc,name=rl_menu,c=1] @s rl_menu"
+					]
+				}
+			}
+		}
+	}
+}

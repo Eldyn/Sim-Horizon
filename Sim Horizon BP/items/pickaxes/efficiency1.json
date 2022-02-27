@@ -1,0 +1,69 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:pickaxe_eff1",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:digger": {
+				"destroy_speeds": [
+					{
+						"speed": 10,
+						"block": {
+							"tags": "query.any_tag('cr:l1')"
+						}
+					},
+					{
+						"speed": 10,
+						"block": {
+							"tags": "query.any_tag('cr:l2')"
+						}
+					},
+					{
+						"speed": 9,
+						"block": {
+							"tags": "query.any_tag('cr:l3')"
+						}
+					},
+					{
+						"speed": 10,
+						"block": {
+							"tags": "query.any_tag('cr:l4')"
+						}
+					}
+				]
+			},
+			"minecraft:icon": {
+				"texture": "pick_cobalt"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					},
+					"third_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					}
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "Piccone di Cobalto"
+			},
+			"minecraft:enchantable": {
+				"slot": "pickaxe"
+			},
+			"tag:cr:pickaxe": {}
+		}
+	}
+}

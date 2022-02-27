@@ -1,0 +1,52 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:mine_satchel",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "mine_sack"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "usee",
+					"target": "self"
+				}
+			},
+			"minecraft:cooldown": {
+				"duration": 0.2,
+				"category": "satchel"
+			}
+		},
+		"events": {
+			"usee": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"tellraw @s[scores={bal_mine=129..}] {\"rawtext\":[{\"text\":\"[] Overflow!\"}]}",
+								"scoreboard players set @s[scores={bal_mine=129..}] bal_mine 128",
+								"titleraw @s actionbar {\"rawtext\":[{\"translate\":\"mine.satchel.stat\"},{\"score\":{\"objective\":\"bal_mine\",\"name\":\"@s\"}}]}"
+							]
+						},
+						"condition": "!query.is_sneaking"
+					},
+					{
+						"run_command": {
+							"command": [
+								"tellraw @s[scores={bal_mine=129..}] {\"rawtext\":[{\"text\":\"[] Overflow!\"}]}",
+								"scoreboard players set @s[scores={bal_mine=129..}] bal_mine 128",
+								"titleraw @s actionbar {\"rawtext\":[{\"translate\":\"mine.satchel.earn\"},{\"score\":{\"objective\":\"bal_mine\",\"name\":\"@s\"}}]}",
+								"scoreboard players operation @s bal += @s bal_mine",
+								"scoreboard players set @s bal_mine 0"
+							]
+						},
+						"condition": "query.is_sneaking"
+					}
+				]
+			}
+		}
+	}
+}

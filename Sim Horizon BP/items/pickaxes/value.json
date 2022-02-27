@@ -1,0 +1,144 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "cr:pickaxe_value",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l1')"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l2')"
+						}
+					},
+					{
+						"speed": 6,
+						"block": {
+							"tags": "query.any_tag('cr:l3')"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l4')"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l1_com')"
+						},
+						"on_dig": {
+							"event": "l1_com",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l2_com')"
+						},
+						"on_dig": {
+							"event": "l2_com",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 6,
+						"block": {
+							"tags": "query.any_tag('cr:l3_com')"
+						},
+						"on_dig": {
+							"event": "l3_com",
+							"target": "self"
+						}
+					},
+					{
+						"speed": 7,
+						"block": {
+							"tags": "query.any_tag('cr:l4_com')"
+						},
+						"on_dig": {
+							"event": "l4_com",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:icon": {
+				"texture": "pick_cobalt"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					},
+					"third_person": {
+						"position": [
+							0,
+							-100,
+							0
+						]
+					}
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "Piccone Valore"
+			},
+			"minecraft:enchantable": {
+				"slot": "pickaxe"
+			},
+			"tag:cr:pickaxe": {}
+		},
+		"events": {
+			"l1_com": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"scoreboard players add @s bal_mine 1"
+					]
+				}
+			},
+			"l2_com": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"scoreboard players add @s bal_mine 2"
+					]
+				}
+			},
+			"l3_com": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"scoreboard players add @s bal_mine 3"
+					]
+				}
+			},
+			"l4_com": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"scoreboard players add @s bal_mine 4"
+					]
+				}
+			}
+		}
+	}
+}
