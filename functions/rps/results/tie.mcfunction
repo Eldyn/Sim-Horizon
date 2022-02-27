@@ -1,0 +1,3 @@
+titleraw @a[x=1075,y=0,z=1060,dx=13,dy=6,dz=22] title {"rawtext":[{"text":"§l-§r§b E' un pareggio§l!§r§f§l -§r"}]}
+titleraw @a[x=1075,y=0,z=1060,dx=13,dy=6,dz=22] subtitle {"rawtext":[{"text":"TITLE §fRisultato: (§c"},{"score":{"name":"@p[tag=rps_p1]","objective":"rps_points"}},{"text":"§f-§b"},{"score":{"name":"@p[tag=rps_p1]","objective":"rps_points"}},{"text":"§f)"}]}
+playsound random.levelup @a[x=1075,y=0,z=1060,dx=13,dy=6,dz=22] ~~~ 1 0.5 1
