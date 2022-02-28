@@ -1,0 +1,46 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:alluminum_2_mine"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "alluminum2",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"tag:floor5": {},
+			"minecraft:loot": "loot_tables/aluminum.json"
+		},
+		"events": {}
+	}
+}

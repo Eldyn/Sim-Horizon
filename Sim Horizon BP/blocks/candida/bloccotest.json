@@ -1,0 +1,62 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:test",
+			"properties": {
+				"sp:block": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"permutations": [
+			{
+				"components": {
+					"minecraft:block_light_emission": 0
+				},
+				"condition": "q.block_property('sp:block') == 0"
+			},
+			{
+				"components": {
+					"minecraft:block_light_emission": 0.2
+				},
+				"condition": "q.block_property('sp:block') == 1"
+			},
+			{
+				"condition": "q.block_property('sp:block') == 2",
+				"components": {
+					"minecraft:block_light_emission": 0.4
+				}
+			},
+			{
+				"condition": "q.block_property('sp:block') == 3",
+				"components": {
+					"minecraft:block_light_emission": 0.9
+				}
+			}
+		],
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "box",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "sp:test"
+			}
+		},
+		"events": {
+			"sp:test": {
+				"set_block_property": {
+					"sp:block": "q.block_property('sp:block')+1"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:blue_shroomlight"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "b_shroomlight",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:block_light_emission": 0.8,
+			"minecraft:block_light_absorption": 0.1
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:mine_gen_l1",
+			"is_experimental": true
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "blackstone",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_placed": {
+				"event": "rand"
+			}
+		},
+		"events": {
+			"rand": {
+				"randomize": [
+					{
+						"weight": 1000,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:l1"
+							]
+						}
+					},
+					{
+						"weight": 65,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_l1_com1"
+							]
+						}
+					},
+					{
+						"weight": 65,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_l1_com2"
+							]
+						}
+					},
+					{
+						"weight": 10,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_l1_rare"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:luckyhblock"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

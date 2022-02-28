@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:empty_bookshelff"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"texture": "gravel"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {}
+	}
+}

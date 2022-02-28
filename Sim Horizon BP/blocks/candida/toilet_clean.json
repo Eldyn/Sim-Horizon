@@ -1,0 +1,80 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:toilet_clean",
+			"is_experimental": false,
+			"properties": {
+				"sp:facing_direction": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('sp:facing_direction') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		],
+		"events": {
+			"set_placing_rotation": {
+				"set_block_property": {
+					"sp:facing_direction": "query.cardinal_facing_2d-2"
+				}
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.tc",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "toilet_server",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:on_player_placing": {
+				"event": "set_placing_rotation"
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0
+		}
+	}
+}

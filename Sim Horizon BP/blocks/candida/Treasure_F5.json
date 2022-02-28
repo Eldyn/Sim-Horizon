@@ -1,0 +1,56 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:treasure_f5"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "treasure",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:destroy_time": 100,
+			"minecraft:loot": "loot_tables/lootf5.json",
+			"minecraft:geometry": "geometry.treasure",
+			"minecraft:on_interact": {
+				"event": "sp:open",
+				"target": "self"
+			}
+		},
+		"events": {
+			"sp:open": {
+				"randomize": [
+					{
+						"weight": 100,
+						"run_command": {
+							"command": [
+								"setblock ~~~ air 0 destroy"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"function randomtokenf5"
+							]
+						}
+					},
+					{
+						"weight": 10,
+						"run_command": {
+							"command": [
+								"function randommoneyf5"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

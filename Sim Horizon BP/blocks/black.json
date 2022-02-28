@@ -1,0 +1,18 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:black"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cr_black",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:destroy_time": 9999
+		}
+	}
+}

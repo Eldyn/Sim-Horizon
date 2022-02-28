@@ -1,0 +1,1 @@
+setblock 1203 -4 1221 redstone_block

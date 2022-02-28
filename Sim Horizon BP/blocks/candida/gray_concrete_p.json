@@ -1,0 +1,21 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:concrete_powder_gray"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "concrete_powder_gray",
+					"ambient_occlusion": false,
+					"render_method": "opaque",
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:unit_cube": {}
+		},
+		"events": {}
+	}
+}

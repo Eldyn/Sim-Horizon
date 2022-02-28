@@ -1,0 +1,7 @@
+{
+    "$title_prefix": "TITLE",
+    "$default_prefix": "DEF",
+    "$alert_prefix": "ALERT",
+    "$kill_prefix": "KILL",
+    "$main_prefix": "NPC_Main"
+}

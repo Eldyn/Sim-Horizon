@@ -1,0 +1,26 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:skulk_table"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cr_skulk_table",
+					"render_method": "opaque"
+				},
+				"up": {
+					"texture": "cr_skulk_table_top",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:rotation": [
+				0,
+				90,
+				0
+			]
+		}
+	}
+}

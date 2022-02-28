@@ -1,0 +1,85 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:interact_info"
+		},
+		"components": {
+			"minecraft:on_interact": {
+				"event": "sp:info",
+				"target": "target"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:block_light_emission": 0.9,
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {
+			"sp:info": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function infobot/1"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function infobot/2"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function infobot/3"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function infobot/4"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function infobot/5"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function infobot/6"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function infobot/7"
+							],
+							"target": "other"
+						}
+					}
+				]
+			}
+		}
+	}
+}

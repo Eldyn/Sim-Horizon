@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:barrel_top"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "barrel_bottom",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {}
+	}
+}

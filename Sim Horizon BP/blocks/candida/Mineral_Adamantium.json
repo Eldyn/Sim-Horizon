@@ -1,0 +1,22 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:adamantium_mine"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "adamantium",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"tag:floor8": {},
+			"minecraft:loot": "loot_tables/adamantium.json"
+		},
+		"events": {}
+	}
+}

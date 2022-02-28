@@ -1,0 +1,31 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:block": {
+		"components": {
+			"minecraft:on_interact": {
+				"event": "say"
+			},
+			"minecraft:on_placed": {
+				"event": "say"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"texture": "bell_stone"
+				}
+			}
+		},
+		"description": {
+			"identifier": "cr:a_say"
+		},
+		"events": {
+			"say": {
+				"run_command": {
+					"command": [
+						"say b"
+					]
+				}
+			}
+		}
+	}
+}

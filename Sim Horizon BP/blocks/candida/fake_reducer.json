@@ -1,0 +1,97 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:fake_reducer",
+			"properties": {
+				"sp:facing_direction": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('sp:facing_direction') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "fake_reducer_top",
+					"render_method": "opaque"
+				},
+				"down": {
+					"texture": "fake_reducer_bottom",
+					"render_method": "opaque"
+				},
+				"north": {
+					"texture": "fake_reducer_north",
+					"render_method": "opaque"
+				},
+				"south": {
+					"texture": "fake_reducer_front",
+					"render_method": "opaque"
+				},
+				"east": {
+					"texture": "fake_reducer_east",
+					"render_method": "opaque"
+				},
+				"west": {
+					"texture": "fake_reducer_west",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:on_player_placing": {
+				"event": "set_placing_rotation"
+			}
+		},
+		"events": {
+			"set_placing_rotation": {
+				"set_block_property": {
+					"sp:facing_direction": "query.cardinal_facing_2d-2"
+				}
+			}
+		}
+	}
+}

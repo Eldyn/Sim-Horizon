@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.spear0": {
+			"textures": [
+				"texture.s0"
+			],
+			"geometry": "geometry.s0",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			]
+		}
+	}
+}

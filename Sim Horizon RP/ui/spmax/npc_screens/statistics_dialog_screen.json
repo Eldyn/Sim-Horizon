@@ -1,0 +1,197 @@
+{
+    "namespace": "statistics_dialog",
+    "screen_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "menu_screen": {
+                    "type": "panel",
+                    "size": [
+                        "50%",
+                        "60%"
+                    ],
+                    "offset": [
+                        0,
+                        0
+                    ],
+                    "controls": [
+                        {
+                            "background": {
+                                "layer": 0,
+                                "type": "image",
+                                "texture": "textures/ui/dark_npc_panel_bg",
+                                "size": [
+                                    "100% + 6px",
+                                    "100% + 16px"
+                                ],
+                                "offset": [
+                                    0,
+                                    -5
+                                ],
+                                "controls": [
+                                    {
+                                        "background_background": {
+                                            "layer": 1,
+                                            "type": "image",
+                                            "texture": "textures/ui/dark_npc_panel",
+                                            "size": [
+                                                "100% - 6px",
+                                                "100% - 16px"
+                                            ],
+                                            "offset": [
+                                                0,
+                                                5
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "menu_title@common_dialogs.standard_title_label": {
+                                "$text_name": "#title_text",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [
+                                    0,
+                                    "-2%-5px"
+                                ],
+                                "color": "white",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#title_text"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#title_text > '')",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "dialog_message": {
+                                "layer": 3,
+                                "type": "label",
+                                "text_alignment": "left",
+                                "size": [
+                                    "100%-16px",
+                                    "default"
+                                ],
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "offset": [
+                                    0,
+                                    "-30%"
+                                ],
+                                "text": "#newdialogtext",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#dialogtext"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#dialogtext - $dialog_prefix > '')",
+                                        "target_property_name": "#visible"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#dialogtext - $dialog_prefix)",
+                                        "target_property_name": "#newdialogtext"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "buttons_panel": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "controls": [
+                                    {
+                                        "buttons_panel": {
+                                            "type": "stack_panel",
+                                            "orientation": "horizontal",
+                                            "size": [
+                                                "100%",
+                                                "12%"
+                                            ],
+                                            "offset": [
+                                                "50% - 60px",
+                                                "50%"
+                                            ],
+                                            "collection_name": "student_buttons_collection",
+                                            "controls": [
+                                                {
+                                                    "0@spmax_customnpcs_common.student_button": {
+                                                        "size": [
+                                                            "30px",
+                                                            "100%"
+                                                        ],
+                                                        "collection_index": 0
+                                                    }
+                                                },
+                                                {
+                                                    "button_padding": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            5,
+                                                            0
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "1@spmax_customnpcs_common.student_button": {
+                                                        "size": [
+                                                            "50px",
+                                                            "100%"
+                                                        ],
+                                                        "collection_index": 1
+                                                    }
+                                                },
+                                                {
+                                                    "button_padding": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            5,
+                                                            0
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "2@spmax_customnpcs_common.student_button": {
+                                                        "size": [
+                                                            "30px",
+                                                            "100%"
+                                                        ],
+                                                        "collection_index": 2
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "close_helper@npc_interact.close_text": {
+                                "anchor_to": "bottom_left",
+                                "anchor_from": "bottom_left",
+                                "offset": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "main_screen@common.base_screen": {
+        "$screen_content": "statistics_dialog.screen_content",
+        "$show_close_button": false
+    }
+}

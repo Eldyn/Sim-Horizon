@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:chair_crimson"
+		},
+		"components": {
+			"minecraft:rotation": [
+				0,
+				90,
+				0
+			],
+			"minecraft:geometry": "geometry.chair",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chair_crimson",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:a",
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:geometry": "geometry.a",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cr_a",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-1,
+					0,
+					-1
+				],
+				"size": [
+					2,
+					2,
+					2
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-1,
+					0,
+					-1
+				],
+				"size": [
+					2,
+					2,
+					2
+				]
+			}
+		}
+	}
+}

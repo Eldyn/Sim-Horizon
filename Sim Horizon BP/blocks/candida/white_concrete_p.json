@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:concrete_powder_white"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:geometry": "geometry.concrete_powder_white",
+			"minecraft:breathability": "solid",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"texture": "concrete_powder_white",
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:blue_amethyst"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "b_amethyst",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:block_light_emission": 0.7
+		},
+		"events": {}
+	}
+}

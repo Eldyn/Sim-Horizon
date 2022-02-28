@@ -1,0 +1,22 @@
+{
+    "namespace": "hud",
+    "hud_title_text": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "offset": [
+            0,
+            0
+        ],
+        "controls": [
+            {
+                "@horizon.horizon_toptext_panel": {}
+            },
+            {
+                "@horizon.horizon_title_panel": {}
+            },
+            {
+                "@horizon.horizon_alert_panel": {}
+            }
+        ]
+    }
+}

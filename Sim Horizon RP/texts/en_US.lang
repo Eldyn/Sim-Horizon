@@ -1,0 +1,134 @@
+##  ░░░██╗░██╗░███╗░░░███╗██╗███╗░░██╗███████╗░░░██╗░██╗░  ##
+##  ██████████╗████╗░████║██║████╗░██║██╔════╝██████████╗  ##
+##  ╚═██╔═██╔═╝██╔████╔██║██║██╔██╗██║█████╗░░╚═██╔═██╔═╝  ##
+##  ██████████╗██║╚██╔╝██║██║██║╚████║██╔══╝░░██████████╗  ##
+##  ╚██╔═██╔══╝██║░╚═╝░██║██║██║░╚███║███████╗╚██╔═██╔══╝  ##
+##  ░╚═╝░╚═╝░░░╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚══════╝░╚═╝░╚═╝░░░  ##
+
+
+enchant.recm.l1.success=§gModule §fR.E.C.M §8[§l§f1§r§8]§r§g Activated§l!
+enchant.recm.l2.success=§gModule §fR.E.C.M §8[§l§f2§r§8]§r§g Activated§l!
+
+enchant.explode.l1.success=§gModule§f Explosion§8[§l§f1§8]§r§g Activated§l! 
+enchant.explode.l2.success=§gModule§f Explosion§8[§l§f2§8]§r§g Activated§l! 
+
+enchant.devorer.l1.success=§gModule§f Devorer§8[§l§f1§8]§r§g Activated§l!
+
+
+alert.earn=§gYou Earned:
+
+mine.satchel.earn=Quantità guadagnata: 
+mine.satchel.stat=Quantità minata: 
+
+
+##  ░░░██╗░██╗░██████╗░██╗████████╗░░░██╗░██╗░  ##
+##  ██████████╗██╔══██╗██║╚══██╔══╝██████████╗  ##
+##  ╚═██╔═██╔═╝██████╔╝██║░░░██║░░░╚═██╔═██╔═╝  ##
+##  ██████████╗██╔═══╝░██║░░░██║░░░██████████╗  ##
+##  ╚██╔═██╔══╝██║░░░░░██║░░░██║░░░╚██╔═██╔══╝  ##
+##  ░╚═╝░╚═╝░░░╚═╝░░░░░╚═╝░░░╚═╝░░░░╚═╝░╚═╝░░░  ##
+
+
+item.cr:cooldownready=§gSkill Ready§l!
+item.cr:oncooldown=§8Skill On Cooldown
+
+
+##  ░░░██╗░██╗░██╗░░░██╗██╗░░░██╗░██╗░  ## 
+##  ██████████╗██║░░░██║██║██████████╗  ##
+##  ╚═██╔═██╔═╝██║░░░██║██║╚═██╔═██╔═╝  ##
+##  ██████████╗██║░░░██║██║██████████╗  ##
+##  ╚██╔═██╔══╝╚██████╔╝██║╚██╔═██╔══╝  ##
+##  ░╚═╝░╚═╝░░░░╚═════╝░╚═╝░╚═╝░╚═╝░░░  ##
+ 
+
+## Screen Titles
+ui.npc_interact.label=§f§l-§r§fClick To Interact§l§f-§r
+spmax.customnpcs.action=Action
+spmax.customnpcs.menu=Menu
+## Misc Texts
+spmax.customnpcs.preview=Preview NPC Screen
+spmax.customnpcs.wip=Work In Progress
+
+ui.teleporter_text=§3Where do you want to go?
+ui.teleporter_name=Teleporter
+ui.button.exit=Exit
+
+location.mine=Mine
+
+ui.warning=§l§fWarning!
+ui.back=Go Back
+
+##Stats
+ui.stats.mine=§f§lMine Stats
+ui.stats.pit=§f§lPit Stats
+ui.stats.roguelike=§f§lRoguelike Stats
+
+##Stats Mine
+ui.stats.mine_dig=§7Blocks Mined§l:§r 
+
+
+## Mine 
+## Onix Dialogues
+ui.onix=§l§fOnix
+ui.onix1=§7[Interact]
+ui.onix.hub=§7Greetings, what would you like from me, the great Onix§l?
+ui.onix.button.roll=Pickaxe
+ui.onix.button.about=Who Are You?
+ui.onix.button.about_spamton=Who's Spamton?
+ui.onix.button.quit=Nothing
+
+ui.onix.about=§7name's §fOnix§7 and I am the Administrator of this place§l.§r
+ui.onix.about1=§7It was granted to me from §fSystem§l:§r§fDawn§7 itself§l.§r§7  Now if you want to excuse me, I have other affairs to attend§l...§r  
+ui.onix.about_spamton=§7Spamton you say§l?      §r§7I don't know anyone with that name, or at least, not anymore§l... 
+
+## Pickaxes Dialogue
+ui.onix.button.pickaxe_pay=Next
+ui.onix.roll_pickaxe_pay_confirm=§7Do you want to spend §c2500 §f{§gH§f}§7 to Reroll your pickaxe§l?
+ui.onix.confirm=Confirm
+ui.onix.roll_pickaxe_pay=§7I don't find it correct for §fSystem§l:§r§fDawn§7 to give you this possibility but I can't object§l.§r§7 If you pay me §c2500 §f{§gH§f}§7 I will rewrite the firmware of your pickaxe§l.§r
+
+
+## Roguelike
+ui.rl_menu.text=Roguelike Text
+
+
+##  ░░░██╗░██╗░██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗░░░██╗░██╗░  ##
+##  ██████████╗██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝██████████╗  ##
+##  ╚═██╔═██╔═╝██████╦╝██║░░░░░██║░░██║██║░░╚═╝█████═╝░╚═██╔═██╔═╝  ##
+##  ██████████╗██╔══██╗██║░░░░░██║░░██║██║░░██╗██╔═██╗░██████████╗  ##
+##  ╚██╔═██╔══╝██████╦╝███████╗╚█████╔╝╚█████╔╝██║░╚██╗╚██╔═██╔══╝  ##
+##  ░╚═╝░╚═╝░░░╚═════╝░╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝░╚═╝░╚═╝░░░  ##
+
+
+item.spawn_egg.entity.cr:fortuna.name=Spawn §g4Tuna§l.§r§fjs
+entity.cr:fortuna.name=§g4Tuna§l.§r§fjs
+
+
+
+##  ░██████╗██╗░░░░░░█████╗░████████╗  ##
+##  ██╔════╝██║░░░░░██╔══██╗╚══██╔══╝  ##
+##  ╚█████╗░██║░░░░░██║░░██║░░░██║░░░  ##
+##  ░╚═══██╗██║░░░░░██║░░██║░░░██║░░░  ##
+##  ██████╔╝███████╗╚█████╔╝░░░██║░░░  ##
+##  ╚═════╝░╚══════╝░╚════╝░░░░╚═╝░░░  ##
+
+sm.lose=§l-§c You lost§l!§r§f -
+sm.win_copper=§f-§f You won §g100§6$§f -
+
+sm.win_self=§bJACKPOT!§r§f | You won: §6
+sm.win_epic_self=§a§lMEGA JACKPOT!§r§f | You won: §6
+sm.win_epic_others=§r§7 Won §eSlot Machine's§7 §l§aMEGA JACKPOT§r§7§e!§f §7(§g
+sm.win_others=§r§7 Won §eSlot Machine§7's §l§bJACKPOT§r§7§e!§f §7(§g
+
+sm.half_self=§f§cYou halved §fthe jackpot §7(
+sm.half_others=§r§cHalved §eSlot Machine§7's Jackpot§l!§r§f §7(§g
+sm.double_self=§fYou §gdoubled §fthe jackpot §7(
+sm.double_others=§r§gDoubled §eSlot Machine§7's Jackpot§l!§r§f §7(§g
+sm.delete_self=§f- §c You deleted the Jackpot§l!§r§f -
+sm.delete_others=§r§7 §4Deleted§7 §eSlot Machine§7's §l§cJACKPOT§r§l!§f §7(§g
+
+sm.tokens=§bYou Found: §7(§3
+item.spawn_egg.entity.cr:onix.name=Spawn §5Onix
+entity.cr:onix.name=§5Onix
+item.spawn_egg.entity.cr:satchel_shop.name=Spawn Franko il satchel shop
+entity.cr:satchel_shop.name=Franko il satchel shop

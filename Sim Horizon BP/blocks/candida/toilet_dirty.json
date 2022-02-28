@@ -1,0 +1,92 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"is_experimental": false,
+			"identifier": "sp:toilet_dirty",
+			"properties": {
+				"sp:facing_direction": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"events": {
+			"sp:stura": {
+				"run_command": {
+					"command": [
+						"function stura"
+					]
+				}
+			},
+			"set_placing_rotation": {
+				"set_block_property": {
+					"sp:facing_direction": "query.cardinal_facing_2d-2"
+				}
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.td",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "toilet_server",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "sp:stura",
+				"condition": "query.get_equipped_item_name=='plunger'"
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:on_player_placing": {
+				"event": "set_placing_rotation"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('sp:facing_direction') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('sp:facing_direction') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		]
+	}
+}

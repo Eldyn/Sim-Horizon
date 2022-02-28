@@ -1,0 +1,20 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:looom"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "loom",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {}
+		},
+		"events": {}
+	}
+}

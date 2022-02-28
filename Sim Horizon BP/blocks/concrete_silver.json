@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:concrete_silver"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "concrete_silver",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:block_light_emission": 1,
+			"minecraft:unit_cube": {}
+		},
+		"events": {}
+	}
+}

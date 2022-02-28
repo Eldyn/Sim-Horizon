@@ -1,0 +1,127 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:interact_atm"
+		},
+		"components": {
+			"minecraft:on_interact": {
+				"event": "atm"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:block_light_emission": 0.9,
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {
+			"atm": {
+				"sequence": [
+					{
+						"condition": "!q.is_sneaking",
+						"run_command": {
+							"command": [
+								"function atm/click"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "query.is_sneaking",
+						"run_command": {
+							"command": [
+								"function atm/shift"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money10'",
+						"run_command": {
+							"command": [
+								"function atm/10"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money50'",
+						"run_command": {
+							"command": [
+								"function atm/50"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money100'",
+						"run_command": {
+							"command": [
+								"function atm/100"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money500'",
+						"run_command": {
+							"command": [
+								"function atm/500"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money1k'",
+						"run_command": {
+							"command": [
+								"function atm/1000"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money10k'",
+						"run_command": {
+							"command": [
+								"function atm/10000"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money100k'",
+						"run_command": {
+							"command": [
+								"function atm/100000"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money500k'",
+						"run_command": {
+							"command": [
+								"function atm/500000"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='money1m'",
+						"run_command": {
+							"command": [
+								"function atm/1000000"
+							],
+							"target": "other"
+						}
+					}
+				]
+			}
+		}
+	}
+}

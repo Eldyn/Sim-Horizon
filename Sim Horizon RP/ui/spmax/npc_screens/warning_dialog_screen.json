@@ -1,0 +1,210 @@
+{
+    "namespace": "warning_dialog",
+    "screen_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "menu_screen": {
+                    "type": "panel",
+                    "size": [
+                        "40%",
+                        "50%"
+                    ],
+                    "offset": [
+                        0,
+                        "2%"
+                    ],
+                    "controls": [
+                        {
+                            "background": {
+                                "layer": 0,
+                                "type": "image",
+                                "texture": "textures/ui/dark_npc_panel_bg",
+                                "size": [
+                                    "100% + 6px",
+                                    "100% + 20px"
+                                ],
+                                "offset": [
+                                    0,
+                                    -8
+                                ],
+                                "controls": [
+                                    {
+                                        "background_background": {
+                                            "layer": 1,
+                                            "type": "image",
+                                            "texture": "textures/ui/dark_npc_panel",
+                                            "size": [
+                                                "100% - 6px",
+                                                "100% - 20px"
+                                            ],
+                                            "offset": [
+                                                0,
+                                                8
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "text_panel": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            "90%",
+                                                            "90%"
+                                                        ],
+                                                        "offset": [
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "dialog_message": {
+                                                                    "layer": 4,
+                                                                    "type": "label",
+                                                                    "text_alignment": "center",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "default"
+                                                                    ],
+                                                                    "offset": [
+                                                                        0,
+                                                                        "-50% + 25px"
+                                                                    ],
+                                                                    "text": "#newdialogtext",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_name": "#dialogtext"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(#dialogtext - $dialog_prefix > '')",
+                                                                            "target_property_name": "#visible"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(#dialogtext - $dialog_prefix)",
+                                                                            "target_property_name": "#newdialogtext"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "middle_padding": {
+                                                                    "type": "panel",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        10
+                                                                    ],
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_name": "#dialogtext"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(#dialogtext - $dialog_prefix > '')",
+                                                                            "target_property_name": "#visible"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "student_buttons": {
+                                                                    "type": "stack_panel",
+                                                                    "collection_name": "student_buttons_collection",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%c"
+                                                                    ],
+                                                                    "offset": [
+                                                                        0,
+                                                                        "20%"
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "button_padding_0": {
+                                                                                "type": "panel",
+                                                                                "size": [
+                                                                                    0,
+                                                                                    5
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "0@spmax_customnpcs_common.student_button": {
+                                                                                "size": [
+                                                                                    "100%",
+                                                                                    "30px"
+                                                                                ],
+                                                                                "collection_index": 0
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "button_padding_0": {
+                                                                                "type": "panel",
+                                                                                "size": [
+                                                                                    0,
+                                                                                    5
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "1@spmax_customnpcs_common.student_button": {
+                                                                                "size": [
+                                                                                    "100%",
+                                                                                    "30px"
+                                                                                ],
+                                                                                "collection_index": 1
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "menu_title@common_dialogs.standard_title_label": {
+                                            "$text_name": "#title_text",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "offset": [
+                                                0,
+                                                6
+                                            ],
+                                            "color": "white",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#title_text"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(#title_text > '')",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "close_helper@npc_interact.close_text": {
+                    "anchor_to": "bottom_left",
+                    "anchor_from": "bottom_left",
+                    "offset": [
+                        20,
+                        0
+                    ]
+                }
+            }
+        ]
+    },
+    "main_screen@common.base_screen": {
+        "$screen_content": "warning_dialog.screen_content",
+        "$show_close_button": false
+    }
+}

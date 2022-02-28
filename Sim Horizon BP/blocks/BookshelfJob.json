@@ -1,0 +1,204 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:bookshelf_job",
+			"properties": {
+				"sp:bookshelf": [
+					0,
+					1,
+					2,
+					3,
+					4
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "planks",
+					"render_method": "opaque",
+					"ambient_occlusion": false
+				},
+				"*": {
+					"texture": "bookshelf_state0",
+					"render_method": "opaque",
+					"ambient_occlusion": false
+				},
+				"down": {
+					"texture": "planks",
+					"render_method": "opaque",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:unit_cube": {},
+			"minecraft:on_interact": {
+				"event": "sp:job",
+				"target": "target"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('sp:bookshelf') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"down": {
+							"texture": "planks",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						},
+						"*": {
+							"texture": "bookshelf_state1",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						},
+						"up": {
+							"texture": "planks",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('sp:bookshelf') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"down": {
+							"texture": "planks",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						},
+						"*": {
+							"texture": "bookshelf_state2",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						},
+						"up": {
+							"texture": "planks",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('sp:bookshelf') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"down": {
+							"texture": "planks",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						},
+						"*": {
+							"texture": "bookshelf_state3",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						},
+						"up": {
+							"texture": "planks",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('sp:bookshelf') == 4",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "sp:void",
+						"target": "target"
+					},
+					"minecraft:material_instances": {
+						"down": {
+							"texture": "planks",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						},
+						"*": {
+							"texture": "bookshelf_state4",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						},
+						"up": {
+							"texture": "planks",
+							"render_method": "opaque",
+							"ambient_occlusion": false
+						}
+					}
+				}
+			}
+		],
+		"events": {
+			"sp:job": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='job_book'&&q.block_property('sp:bookshelf')==0",
+						"run_command": {
+							"command": [
+								"function librarian/job/state1"
+							],
+							"target": "other"
+						},
+						"set_block_property": {
+							"sp:bookshelf": "q.block_property('sp:bookshelf')+1"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function librarian/job/state2"
+							],
+							"target": "other"
+						},
+						"set_block_property": {
+							"sp:bookshelf": "q.block_property('sp:bookshelf')+1"
+						},
+						"condition": "q.get_equipped_item_name=='job_book'&&q.block_property('sp:bookshelf')==1"
+					},
+					{
+						"condition": "q.get_equipped_item_name=='job_book'&&q.block_property('sp:bookshelf')==2",
+						"run_command": {
+							"command": [
+								"function librarian/job/state3"
+							],
+							"target": "other"
+						},
+						"set_block_property": {
+							"sp:bookshelf": "q.block_property('sp:bookshelf')+1"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='job_book'&&q.block_property('sp:bookshelf')==3",
+						"run_command": {
+							"command": [
+								"function librarian/job/state4"
+							],
+							"target": "other"
+						},
+						"set_block_property": {
+							"sp:bookshelf": "q.block_property('sp:bookshelf')+1"
+						}
+					}
+				]
+			},
+			"sp:void": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function librarian/job/already_done"
+							],
+							"target": "other"
+						},
+						"condition": "q.block_property('sp:bookshelf')==4"
+					}
+				]
+			}
+		}
+	}
+}

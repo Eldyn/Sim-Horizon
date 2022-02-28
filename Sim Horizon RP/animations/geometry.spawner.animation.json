@@ -1,0 +1,40 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.rotate_in_spawner": {
+			"loop": true,
+			"animation_length": 0.52,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": [
+							-7.5,
+							0,
+							0
+						],
+						"0.52": [
+							0,
+							360,
+							0
+						]
+					},
+					"position": [
+						0,
+						1,
+						-1
+					],
+					"scale": 0.25
+				},
+				"spawner": {
+					"scale": 0.25
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "fuoco",
+					"locator": "flames"
+				}
+			}
+		}
+	}
+}

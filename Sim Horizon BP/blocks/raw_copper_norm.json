@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:raw_copper_norm"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cr_raw_copper_norm",
+					"render_method": "opaque"
+				}
+			}
+		}
+	}
+}

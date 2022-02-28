@@ -1,0 +1,67 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:mine_gen_l4",
+			"is_experimental": true
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cr_generate",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_placed": {
+				"event": "rand"
+			}
+		},
+		"events": {
+			"rand": {
+				"randomize": [
+					{
+						"weight": 1000,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:l4"
+							]
+						}
+					},
+					{
+						"weight": 70,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_l4_com1"
+							]
+						}
+					},
+					{
+						"weight": 70,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_l4_com2"
+							]
+						}
+					},
+					{
+						"weight": 10,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_l4_rare"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:luckyhblock"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

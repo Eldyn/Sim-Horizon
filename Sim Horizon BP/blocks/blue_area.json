@@ -1,0 +1,19 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:blue_area"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "blue",
+					"render_method": "opaque",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			},
+			"minecraft:unit_cube": {}
+		}
+	}
+}

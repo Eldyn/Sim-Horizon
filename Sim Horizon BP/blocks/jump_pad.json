@@ -1,0 +1,32 @@
+{
+	"format_version": "1.17.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:jump_pad"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_step_on": {
+				"target": "self",
+				"event": "step"
+			},
+			"minecraft:entity_collision": true
+		},
+		"events": {
+			"step": {
+				"add_mob_effect": {
+					"effect": "levitation",
+					"amplifier": 17,
+					"duration": 1,
+					"target": "other"
+				}
+			}
+		}
+	}
+}

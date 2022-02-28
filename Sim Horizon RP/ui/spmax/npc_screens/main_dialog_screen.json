@@ -1,0 +1,390 @@
+{
+	"namespace": "main_dialog",
+	"screen_content": {
+		"type": "panel",
+		"controls": [
+			{
+				"menu_screen": {
+					"type": "panel",
+					"size": [
+						"52%",
+						"70%"
+					],
+					"offset": [
+						"-20%",
+						0
+					],
+					"controls": [
+						{
+							"background": {
+								"layer": 0,
+								"type": "image",
+								"texture": "textures/ui/dark_npc_panel_bg",
+								"size": [
+									"100% + 6px",
+									"100% + 16px"
+								],
+								"offset": [
+									0,
+									-5
+								],
+								"controls": [
+									{
+										"background_background": {
+											"layer": 1,
+											"type": "image",
+											"texture": "textures/ui/dark_npc_panel",
+											"size": [
+												"100% - 6px",
+												"100% - 16px"
+											],
+											"offset": [
+												0,
+												5
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"close_button@npc_interact.close_button_holder": {
+								"offset": [
+									30,
+									0
+								],
+								"layer": 10
+							}
+						},
+						{
+							"dialog_message": {
+								"layer": 3,
+								"offset": [
+									"10px",
+									"-50% + 20px"
+								],
+								"type": "label",
+								"text_alignment": "left",
+								"size": [
+									"100%",
+									"default"
+								],
+								"text": "#newdialogtext",
+								"bindings": [
+									{
+										"binding_name": "#dialogtext"
+									},
+									{
+										"binding_type": "view",
+										"source_property_name": "(#dialogtext - $dialog_prefix > '')",
+										"target_property_name": "#visible"
+									},
+									{
+										"binding_type": "view",
+										"source_property_name": "(#dialogtext - $dialog_prefix)",
+										"target_property_name": "#newdialogtext"
+									}
+								]
+							}
+						},
+						{
+							"menu_title@common_dialogs.standard_title_label": {
+								"$text_name": "#title_text",
+								"anchor_from": "top_middle",
+								"anchor_to": "top_middle",
+								"offset": [
+									0,
+									-10
+								],
+								"bindings": [
+									{
+										"binding_name": "#title_text"
+									},
+									{
+										"binding_type": "view",
+										"source_property_name": "(#title_text > '')",
+										"target_property_name": "#visible"
+									}
+								]
+							}
+						},
+						{
+							"menu_screen_buttons": {
+								"type": "panel",
+								"size": [
+									"70%",
+									"100%"
+								],
+								"offset": [
+									"92%",
+									"-2%"
+								],
+								"controls": [
+									{
+										"background": {
+											"layer": 0,
+											"type": "image",
+											"texture": "textures/ui/dark_npc_panel_bg",
+											"size": [
+												"100%+4px",
+												"100%+6px"
+											],
+											"offset": [
+												0,
+												4
+											],
+											"controls": [
+												{
+													"background_background": {
+														"layer": 1,
+														"type": "image",
+														"texture": "textures/ui/dark_npc_panel",
+														"size": [
+															"100%-4px",
+															"100%-6px"
+														],
+														"offset": [
+															0,
+															0
+														]
+													}
+												}
+											]
+										}
+									},
+									{
+										"interact_label": {
+											"offset": [
+												0,
+												"-50% + 22px"
+											],
+											"type": "label",
+											"text": "ui.npc_interact.label",
+											"layer": 3,
+											"font_size": "normal",
+											"shadow": true
+										}
+									},
+									{
+										"student_buttons": {
+											"type": "stack_panel",
+											"collection_name": "student_buttons_collection",
+											"size": [
+												"75%",
+												"100%c"
+											],
+											"offset": [
+												0,
+												"5%+5px"
+											],
+											"controls": [
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"0@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 0
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"1@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"offset": [
+															0,
+															10
+														],
+														"collection_index": 1
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"2@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 2
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"3@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 3
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"4@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 4
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"5@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 5
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"6@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 6
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"7@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 7
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"8@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 8
+													}
+												},
+												{
+													"button_padding": {
+														"type": "panel",
+														"size": [
+															0,
+															4
+														]
+													}
+												},
+												{
+													"9@spmax_customnpcs_common.student_button": {
+														"size": [
+															"100%",
+															"30px"
+														],
+														"collection_index": 9
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"close_helper@npc_interact.close_text": {
+					"anchor_to": "bottom_left",
+					"anchor_from": "bottom_left",
+					"offset": [
+						20,
+						0
+					]
+				}
+			}
+		]
+	},
+	"main_screen@common.base_screen": {
+		"$screen_content": "main_dialog.screen_content",
+		"$show_close_button": false
+	}
+}

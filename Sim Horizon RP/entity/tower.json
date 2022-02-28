@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "cr:tower",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"particle_effects": {
+				"fire0": "cr:tower_fire0",
+				"fire1": "cr:tower_fire1"
+			},
+			"textures": {
+				"blue": "textures/entity/tower_b",
+				"red": "textures/entity/tower_r"
+			},
+			"geometry": {
+				"bluerot": "geometry.tower_br",
+				"redrot": "geometry.tower_br"
+			},
+			"render_controllers": [
+				"controller.render.tower"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			}
+		}
+	}
+}

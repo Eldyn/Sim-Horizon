@@ -1,0 +1,27 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"cr:fortuna": {
+				"volume": 1,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"hurt": "mob.fortuna.hurt",
+					"hurt.in.water": "mob.fortuna.hurt",
+					"flop": {
+						"sound": "mob.fortuna.flop",
+						"volume": 1,
+						"pitch": 1
+					},
+					"step": {
+						"sound": "mob.fortuna.step",
+						"volume": 0.15,
+						"pitch": 1
+					}
+				}
+			}
+		}
+	}
+}

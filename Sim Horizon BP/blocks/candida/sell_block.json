@@ -1,0 +1,19 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:selling_block_mine"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "concrete_lime",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:block_light_emission": 0.4
+		},
+		"events": {}
+	}
+}

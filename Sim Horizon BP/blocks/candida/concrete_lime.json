@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:concrete_lime"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"texture": "concrete_lime"
+				}
+			},
+			"minecraft:block_light_emission": 1,
+			"minecraft:unit_cube": {}
+		},
+		"events": {}
+	}
+}

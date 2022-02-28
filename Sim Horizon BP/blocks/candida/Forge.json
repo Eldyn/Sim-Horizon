@@ -1,0 +1,37 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:forge"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "f_top",
+					"render_method": "opaque"
+				},
+				"down": {
+					"texture": "f_top",
+					"render_method": "opaque"
+				},
+				"west": {
+					"texture": "f_front",
+					"render_method": "opaque"
+				},
+				"*": {
+					"texture": "f_side",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:crafting_table": {
+				"crafting_tags": [
+					"forge"
+				],
+				"custom_description": "§cForgia",
+				"grid_size": 3
+			},
+			"minecraft:unit_cube": {}
+		},
+		"events": {}
+	}
+}

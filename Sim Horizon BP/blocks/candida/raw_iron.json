@@ -1,0 +1,46 @@
+{
+	"format_version": 1.17,
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:raw_iron_mine"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "raw_iron",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"tag:floor4": {}
+		},
+		"events": {}
+	}
+}

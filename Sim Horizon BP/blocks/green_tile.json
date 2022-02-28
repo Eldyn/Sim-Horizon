@@ -1,0 +1,31 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:green_tile"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"north": {
+					"texture": "cr_gts"
+				},
+				"east": {
+					"texture": "cr_gts"
+				},
+				"south": {
+					"texture": "cr_gts"
+				},
+				"west": {
+					"texture": "cr_gts"
+				},
+				"*": {
+					"texture": "cr_gt",
+					"render_method": "opaque",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			},
+			"minecraft:unit_cube": {}
+		}
+	}
+}

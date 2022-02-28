@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.tower": {
+			"arrays": {
+				"textures": {
+					"Array.texture": [
+						"Texture.blue",
+						"Texture.red"
+					]
+				},
+				"geometries": {
+					"Array.models": [
+						"Geometry.bluerot",
+						"Geometry.redrot"
+					]
+				}
+			},
+			"geometry": "array.models[q.variant]",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.texture[q.variant]"
+			]
+		}
+	}
+}

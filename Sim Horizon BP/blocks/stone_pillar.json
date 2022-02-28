@@ -1,0 +1,376 @@
+{
+	"format_version": "1.17.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:pillar_stone",
+			"is_experimental": true,
+			"properties": {
+				"pos:north": [
+					0,
+					1
+				],
+				"pos:south": [
+					0,
+					1
+				],
+				"pos:west": [
+					0,
+					1
+				],
+				"pos:east": [
+					0,
+					1
+				],
+				"pos:up": [
+					0,
+					1
+				],
+				"pos:down": [
+					0,
+					1
+				],
+				"tick:update": [
+					true,
+					false
+				],
+				"cr:block_rot": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_property('cr:block_rot') == 0 && q.block_property('pos:up') == 0 && q.block_property('pos:down') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_base",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "stone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 0 && q.block_property('pos:up') == 1 && q.block_property('pos:down') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_base",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "stone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 0 && q.block_property('pos:up') == 1 && q.block_property('pos:down') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_center",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 0 && q.block_property('pos:up') == 0 && q.block_property('pos:down') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_top",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "stone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 1 && q.block_property('pos:north') == 0 && q.block_property('pos:south') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_base",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "stone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 1 && q.block_property('pos:north') == 0 && q.block_property('pos:south') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_base",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "stone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 1 && q.block_property('pos:north') == 1 && q.block_property('pos:south') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_center",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "stone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 1 && q.block_property('pos:north') == 1 && q.block_property('pos:south') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_top",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "stone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 2 && q.block_property('pos:west') == 0 && q.block_property('pos:east') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_base",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "stone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 2 && q.block_property('pos:west') == 1 && q.block_property('pos:east') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_base",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "stone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 2 && q.block_property('pos:west') == 1 && q.block_property('pos:east') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_center",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('cr:block_rot') == 2 && q.block_property('pos:west') == 0 && q.block_property('pos:east') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "stone_pillar_top",
+							"render_method": "opaque"
+						},
+						"down": {
+							"texture": "cobblestone",
+							"render_method": "opaque"
+						},
+						"up": {
+							"texture": "stone",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('cr:block_rot') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('cr:block_rot') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('cr:block_rot') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						90
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:creative_category": {
+				"category": "construction",
+				"group": "itemGroup.name.stone"
+			},
+			"tag:pillar_stone": {},
+			"minecraft:unit_cube": {},
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:on_interact": {
+				"event": "update",
+				"condition": "query.get_equipped_item_name=='admin_tool'"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"on_tick": {
+					"condition": "q.block_property('tick:update')!=false",
+					"event": "change"
+				},
+				"range": [
+					2,
+					2
+				]
+			}
+		},
+		"events": {
+			"update": {
+				"set_block_property": {
+					"tick:update": "q.block_property('tick:update')==false"
+				}
+			},
+			"change": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"pos:south": "q.block_neighbor_has_any_tag(0, 0, 1, 'pillar_stone')"
+						}
+					},
+					{
+						"set_block_property": {
+							"pos:north": "q.block_neighbor_has_any_tag(0, 0, -1, 'pillar_stone')"
+						}
+					},
+					{
+						"set_block_property": {
+							"pos:east": "q.block_neighbor_has_any_tag(1, 0, 0, 'pillar_stone')"
+						}
+					},
+					{
+						"set_block_property": {
+							"pos:west": "q.block_neighbor_has_any_tag(-1, 0, 0, 'pillar_stone')"
+						}
+					},
+					{
+						"set_block_property": {
+							"pos:up": "q.block_neighbor_has_any_tag(0, 1, 0, 'pillar_stone')"
+						}
+					},
+					{
+						"set_block_property": {
+							"pos:down": "q.block_neighbor_has_any_tag(0, -1, 0, 'pillar_stone')"
+						}
+					}
+				]
+			},
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"cr:block_rot": "math.floor(query.block_face/2)"
+				}
+			}
+		}
+	}
+}

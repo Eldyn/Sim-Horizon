@@ -1,0 +1,58 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:mine_generate",
+			"is_experimental": true
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cr_generate",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:ticking": {
+				"looping": false,
+				"on_tick": {
+					"event": "rand"
+				},
+				"range": [
+					3,
+					3
+				]
+			}
+		},
+		"events": {
+			"rand": {
+				"randomize": [
+					{
+						"weight": 5,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_generator1"
+							]
+						}
+					},
+					{
+						"weight": 5,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_generator2"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"setblock ~~~ cr:mine_generator3"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

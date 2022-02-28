@@ -1,0 +1,43 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:mine_l4_com2"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "mine_l4_2",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "dig",
+				"target": "self"
+			},
+			"tag:cr:l4_com": {},
+			"tag:cr:l4": {},
+			"minecraft:destroy_time": 23,
+			"minecraft:loot": "loot_tables/empty.json"
+		},
+		"events": {
+			"dig": {
+				"run_command": {
+					"command": [
+						"scoreboard players remove @s mine_damage 1",
+						"scoreboard players add @s s_mine_dig_com 1",
+						"scoreboard players add @s s_mine_dig 1",
+						"scoreboard players add mined vars 1",
+						"scoreboard players set temp vars 4",
+						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
+						"titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
+						"titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f TeraByte\"}]}",
+						"scoreboard players operation @s bal_mine += temp vars"
+					],
+					"target": "player"
+				}
+			}
+		}
+	}
+}

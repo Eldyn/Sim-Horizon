@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:concrete_quartz"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "concretequartz_side",
+					"render_method": "opaque"
+				},
+				"up": {
+					"render_method": "opaque",
+					"texture": "concretequartz_top"
+				},
+				"down": {
+					"texture": "concretequartz_bot",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:breathability": "solid"
+		},
+		"events": {}
+	}
+}

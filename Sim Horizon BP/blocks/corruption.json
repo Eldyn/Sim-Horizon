@@ -1,0 +1,50 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cr:corruption"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "corruption",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:destroy_time": 0,
+			"minecraft:unit_cube": {},
+			"minecraft:ticking": {
+				"range": [
+					5,
+					5
+				],
+				"on_tick": {
+					"event": "remove",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"dig": {
+				"run_command": {
+					"command": [
+						"scoreboard players remove @s mine_damage 1",
+						"scoreboard players add mined vars 1",
+						"scoreboard players set temp vars 2",
+						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
+						"titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
+						"titleraw @s title {\"rawtext\":[{\"text\":\"ALERT §gHai guadagnato:\n§a§l \"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§l§k§3???\"}]}",
+						"scoreboard players operation @s bal_mine += temp vars"
+					],
+					"target": "player"
+				}
+			},
+			"remove": {
+				"set_block": {
+					"block_type": "air"
+				}
+			}
+		}
+	}
+}

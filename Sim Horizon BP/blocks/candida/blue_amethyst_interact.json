@@ -1,0 +1,33 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:blue_amethyst_interact"
+		},
+		"components": {
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "b_amethyst",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:block_light_emission": 0.7,
+			"minecraft:on_interact": {
+				"event": "scene",
+				"condition": "q.get_equipped_item_name=='prismodium'",
+				"target": "target"
+			}
+		},
+		"events": {
+			"scene": {
+				"run_command": {
+					"target": "other",
+					"command": [
+						"tag @s add asking_prismodium"
+					]
+				}
+			}
+		}
+	}
+}

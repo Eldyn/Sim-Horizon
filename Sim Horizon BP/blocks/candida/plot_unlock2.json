@@ -1,0 +1,47 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:plot_unlock2"
+		},
+		"components": {
+			"minecraft:on_interact": {
+				"event": "sp:unlock_plot",
+				"condition": "query.scoreboard('$R')>=15000"
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"north": {
+					"texture": "plot_lock",
+					"render_method": "opaque"
+				},
+				"*": {
+					"texture": "build_deny",
+					"render_method": "opaque"
+				}
+			}
+		},
+		"events": {
+			"sp:unlock_plot": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function plot/unlock2_block"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function plot/unlock2"
+							],
+							"target": "other"
+						}
+					}
+				]
+			}
+		}
+	}
+}

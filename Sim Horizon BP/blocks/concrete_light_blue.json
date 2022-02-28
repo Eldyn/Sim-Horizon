@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sp:concrete_light_blue"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"texture": "concrete_light_blue"
+				}
+			},
+			"minecraft:block_light_emission": 1,
+			"minecraft:unit_cube": {}
+		},
+		"events": {}
+	}
+}
