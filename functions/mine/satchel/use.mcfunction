@@ -1,6 +1,6 @@
 #max soldi
-scoreboard players operation @s temp = @s bal_mine
-scoreboard players operation @s temp -= @s mine_sat_m
+scoreboard players operation @s temp = @s mine_sat_m
+scoreboard players operation @s temp -= @s bal_mine
 scoreboard players operation @s[scores={temp=..-1}] bal_mine = @s mine_sat_m
 tellraw @s[scores={temp=..-1}] {"rawtext":[{"text":"Overflow!"}]}
 #scala livello
