@@ -26,21 +26,7 @@
 					{
 						"run_command": {
 							"command": [
-								"tellraw @s[scores={bal_mine=129..}] {\"rawtext\":[{\"text\":\"[] Overflow!\"}]}",
-								"scoreboard players set @s[scores={bal_mine=129..}] bal_mine 128",
-								"titleraw @s actionbar {\"rawtext\":[{\"translate\":\"mine.satchel.stat\"},{\"score\":{\"objective\":\"bal_mine\",\"name\":\"@s\"}}]}"
-							]
-						},
-						"condition": "!query.is_sneaking"
-					},
-					{
-						"run_command": {
-							"command": [
-								"tellraw @s[scores={bal_mine=129..}] {\"rawtext\":[{\"text\":\"[] Overflow!\"}]}",
-								"scoreboard players set @s[scores={bal_mine=129..}] bal_mine 128",
-								"titleraw @s actionbar {\"rawtext\":[{\"translate\":\"mine.satchel.earn\"},{\"score\":{\"objective\":\"bal_mine\",\"name\":\"@s\"}}]}",
-								"scoreboard players operation @s bal += @s bal_mine",
-								"scoreboard players set @s bal_mine 0"
+								"function mine/satchel/use"
 							]
 						},
 						"condition": "query.is_sneaking"
