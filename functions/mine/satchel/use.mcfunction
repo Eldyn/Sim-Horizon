@@ -14,7 +14,6 @@ scoreboard players operation @s temp = @s mine_prestigem
 scoreboard players operation @s temp -= @s mine_prestige
 execute @s[scores={temp=..0}] ~ ~ ~ function mine/satchel/prestige
 
-titleraw @s actionbar {"rawtext":[{"score":{"objective":"bal_mine","name":"@s"}},{"text":"/"},{"score":{"objective":"mine_sat_m","name":"@s"}},{"text":"\n"},{"score":{"objective":"mine_sat_xp","name":"@s"}},{"text":"/"},{"score":{"objective":"mine_sat_xpm","name":"@s"}},{"text":"\n"},{"score":{"objective":"mine_sat_prestige","name":"@s"}},{"text":"/"},{"score":{"objective":"mine_sat_prestigem","name":"@s"}}]}
 
 #default reset soldi
 scoreboard players operation @s bal += @s bal_mine
