@@ -29,3 +29,5 @@ scoreboard objectives add mine_sat_lvl dummy
 scoreboard objectives add mine_prestige dummy
 scoreboard objectives add mine_prestigem dummy
 scoreboard players set a2 vars 2
+scoreboard players set a3 vars 3
+scoreboard players set a5 vars 5
