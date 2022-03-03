@@ -20,5 +20,4 @@ fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:luckyhblock
 particle minecraft:knockback_roar_particle ~~~
 playsound block.end_portal_frame.fill @a[r=6] ~~~ 1 1 1
 titleraw @s title {"rawtext":[{"text":"DEF"},{"translate":"enchant.devorer.l1.success"}]}
-scoreboard players add @s bal_mine 200
 scoreboard players add mined vars 230
