@@ -1,5 +1,7 @@
 playsound random.break @s
-replaceitem entity @s slot.weapon.mainhand 0 air
+clear
+give @s cr:traveler
+give @s[scores={i_mine_satchel=0}] cr:mine_satchel
 scoreboard players set @s i_mine_pickaxe -2000
 scoreboard players set @s mine_damage -200
 tag @s remove berserk
