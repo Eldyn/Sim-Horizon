@@ -39,6 +39,14 @@
 				"minecraft:scale": {
 					"value": 1
 				}
+			},
+			"level_4":{
+				"minecraft:mark_variant":{
+					 "value": 3
+				},
+				"minecraft:scale": {
+					 "value": 2
+				}
 			}
 		},
 		"components": {

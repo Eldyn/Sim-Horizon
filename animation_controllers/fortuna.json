@@ -14,6 +14,9 @@
 						},
 						{
 							"set_blockkk": "query.is_on_ground&&query.mark_variant==2"
+						},
+						{
+							"set_blockkkk": "query.is_on_ground&&query.mark_variant==3"
 						}
 					]
 				},
@@ -70,6 +73,26 @@
 						"/fill ~1~-1~1 ~-1~-2~-1 cr:oro 0 replace cr:mine_l2_com2",
 						"/fill ~1~-1~1 ~-1~-2~-1 cr:oro 0 replace cr:mine_l3_com1",
 						"/fill ~1~-1~1 ~-1~-2~-1 cr:oro 0 replace cr:mine_l3_com2"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_on_ground"
+						}
+					]
+				},
+				"set_blockkkk": {
+					"on_entry": [
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:l1",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:l2",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:l3",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:mine_l1_com1",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:l4",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:mine_l1_com2",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:mine_l1_rare",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:mine_l2_com1",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:mine_l2_com2",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:mine_l3_com1",
+						"/fill ~2~-1~2 ~-2~-2~-2 cr:oro 0 replace cr:mine_l3_com2"
 					],
 					"transitions": [
 						{

@@ -83,6 +83,17 @@
 				]
 			},
 			{
+				"scene_tag":"horion_skin",
+				"npc_name": {"rawtext":[{"text":"§f§lHorion"}]},
+				"text": {"rawtext":[{"translate":"ui.horion"}]},
+				"buttons":[
+					{ "name": {"rawtext":[{"translate":"ui.horion.skin_def"}]},"commands":[
+						"/say equip skin def"
+
+					]} 
+				]
+			},
+			{
 				"scene_tag": "horion_about",
 				"npc_name": {
 					"rawtext": [
