@@ -1,16 +1,39 @@
+tag @s remove mine_memento_mori
+tag @s remove mine_recollection
+tag @s remove mine_overclock
+tag @s remove mine_rewind
+tag @s remove mine_relife
+tag @s remove mine_atropos
+tag @s remove mine_clotus
+tag @s remove mine_berserker
+
 clear
 give @s cr:traveler
 scoreboard players set @s mine_durability 2000
+#damocles
 scoreboard players set @s[scores={i_mine_pickaxe=36}] mine_durability 2147483607
+#unbreaking1
 scoreboard players add @s[scores={i_mine_pickaxe=32}] mine_durability 400
+scoreboard players add @s[scores={i_mine_pickaxe=50}] mine_durability 400
+#unbreaking2
 scoreboard players add @s[scores={i_mine_pickaxe=38}] mine_durability 800
 scoreboard players add @s[scores={i_mine_pickaxe=39}] mine_durability 800
+#unbreaking3
 scoreboard players add @s[scores={i_mine_pickaxe=42}] mine_durability 1200
 scoreboard players add @s[scores={i_mine_pickaxe=43}] mine_durability 1200
+scoreboard players add @s[scores={i_mine_pickaxe=49}] mine_durability 1200
+#reinforced
 scoreboard players add @s[scores={i_mine_pickaxe=37}] mine_durability 1000
 scoreboard players add @s[scores={i_mine_pickaxe=35}] mine_durability 1000
 scoreboard players add @s[scores={i_mine_pickaxe=40}] mine_durability 1000
+scoreboard players add @s[scores={i_mine_pickaxe=49}] mine_durability 1000
+#oam
 scoreboard players add @s[scores={i_mine_pickaxe=37}] mine_durability 50
+#lachesis
+scoreboard players random @s[scores={i_mine_pickaxe=47}] mine_durability 500 6000
+scoreboard players random @s[scores={i_mine_pickaxe=48}] mine_durability 500 6000
+
+
 tag @s[scores={i_mine_pickaxe=12..14}] add mine_overclock
 tag @s[scores={i_mine_pickaxe=35}] add mine_overclock
 tag @s[scores={i_mine_pickaxe=30}] add mine_memento_mori
@@ -20,7 +43,11 @@ tag @s[scores={i_mine_pickaxe=38}] add mine_recollection
 tag @s[scores={i_mine_pickaxe=38}] add mine_rewind
 tag @s[scores={i_mine_pickaxe=46}] add mine_recollection
 tag @s[scores={i_mine_pickaxe=46}] add mine_rewind
-tag @s[scores={i_mine_pickaxe=46}] add mine_rewlife
+tag @s[scores={i_mine_pickaxe=46}] add mine_relife
+tag @s[scores={i_mine_pickaxe=47}] add mine_clotus
+tag @s[scores={i_mine_pickaxe=49}] add mine_berserker
+tag @s[scores={i_mine_pickaxe=50}] add mine_atropos
+
 give @s[scores={i_mine_pickaxe=1}] cr:pickaxe0 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_com1","cr:mine_l1_com2","cr:mine_l1_rare","cr:mine_l2_com1","cr:mine_l2_com2","cr:mine_l2_rare","cr:mine_l3_com1","cr:mine_l3_com2","cr:mine_l3_rare","cr:mine_l4_com1","cr:mine_l4_com2","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
 give @s[scores={i_mine_pickaxe=2}] cr:pickaxe_eff1 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_com1","cr:mine_l1_com2","cr:mine_l1_rare","cr:mine_l2_com1","cr:mine_l2_com2","cr:mine_l2_rare","cr:mine_l3_com1","cr:mine_l3_com2","cr:mine_l3_rare","cr:mine_l4_com1","cr:mine_l4_com2","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
 give @s[scores={i_mine_pickaxe=3}] cr:pickaxe_eff2 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_com1","cr:mine_l1_com2","cr:mine_l1_rare","cr:mine_l2_com1","cr:mine_l2_com2","cr:mine_l2_rare","cr:mine_l3_com1","cr:mine_l3_com2","cr:mine_l3_rare","cr:mine_l4_com1","cr:mine_l4_com2","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
@@ -58,5 +85,11 @@ give @s[scores={i_mine_pickaxe=43}] cr:pickaxe_c_niceone 1 0 {"item_lock":{"mode
 give @s[scores={i_mine_pickaxe=44}] cr:pickaxe_c_poseidon 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_rare","cr:mine_l2_rare","cr:mine_l3_rare","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
 give @s[scores={i_mine_pickaxe=45}] cr:pickaxe_c_fisherman 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_com1","cr:mine_l1_com2","cr:mine_l1_rare","cr:mine_l2_com1","cr:mine_l2_com2","cr:mine_l2_rare","cr:mine_l3_com1","cr:mine_l3_com2","cr:mine_l3_rare","cr:mine_l4_com1","cr:mine_l4_com2","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
 give @s[scores={i_mine_pickaxe=46}] cr:pickaxe_c_kronos 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_rare","cr:mine_l2_rare","cr:mine_l3_rare","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
+
+give @s[scores={i_mine_pickaxe=47}] cr:pickaxe_c_quidam 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_rare","cr:mine_l2_rare","cr:mine_l3_rare","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
+give @s[scores={i_mine_pickaxe=48}] cr:pickaxe_c_ulysses 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_rare","cr:mine_l2_rare","cr:mine_l3_rare","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
+give @s[scores={i_mine_pickaxe=49}] cr:pickaxe_c_kentaro 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_rare","cr:mine_l2_rare","cr:mine_l3_rare","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
+give @s[scores={i_mine_pickaxe=50}] cr:pickaxe_c_littlestar 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_rare","cr:mine_l2_rare","cr:mine_l3_rare","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
+
 scoreboard players operation @s mine_damage = @s mine_durability
 tag @s remove give_pickaxe

@@ -46,40 +46,24 @@
                         "speed": 13,
                         "block": {
                             "tags": "query.any_tag('cr:l1')"
-                        },
-                        "on_dig": {
-                            "event": "enchant",
-                            "target": "self"
                         }
                     },
                     {
                         "speed": 13,
                         "block": {
                             "tags": "query.any_tag('cr:l2')"
-                        },
-                        "on_dig": {
-                            "event": "enchant",
-                            "target": "self"
                         }
                     },
                     {
                         "speed": 13,
                         "block": {
                             "tags": "query.any_tag('cr:l3')"
-                        },
-                        "on_dig": {
-                            "event": "enchant",
-                            "target": "self"
                         }
                     },
                     {
                         "speed": 13,
                         "block": {
                             "tags": "query.any_tag('cr:l4')"
-                        },
-                        "on_dig": {
-                            "event": "enchant",
-                            "target": "self"
                         }
                     },
                     {
@@ -147,7 +131,7 @@
             },
             "minecraft:hand_equipped": true,
             "minecraft:display_name": {
-                "value": "Ulysses\nUnbreaking II\nLakesys\nValore\nRare Hunter"
+                "value": "Ulysses\nUnbreaking II\nLakesys\nValue\nRare Hunter"
             },
             "tag:cr:pickaxe": {}
         },
@@ -231,22 +215,6 @@
                         "scoreboard players add @s bal_mine 4"
                     ]
                 }
-            },
-            "enchant": {
-                "randomize": [
-                    {
-                        "weight": 10,
-                        "run_command": {
-                            "target": "self",
-                            "command": [
-                                "function mine/enchants/luckyy"
-                            ]
-                        }
-                    },
-                    {
-                        "weight": 2000
-                    }
-                ]
             }
         }
     }

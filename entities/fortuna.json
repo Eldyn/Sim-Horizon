@@ -27,11 +27,17 @@
 			"level_2": {
 				"minecraft:mark_variant": {
 					"value": 1
+				},
+				"minecraft:scale": {
+					"value": 0.7
 				}
 			},
 			"level_3": {
 				"minecraft:mark_variant": {
 					"value": 2
+				},
+				"minecraft:scale": {
+					"value": 1
 				}
 			}
 		},
