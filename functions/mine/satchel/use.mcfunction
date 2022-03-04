@@ -7,9 +7,13 @@
 scoreboard players operation @s temp = @s mine_sat_m
 scoreboard players operation @s temp -= @s bal_mine
 scoreboard players operation @s[scores={temp=..-1}] bal_mine = @s mine_sat_m
+#enchant
+execute @s[tag=mine_sat_mgreed,scores={temp=..0}] ~ ~ ~ function  mine/satchel/enchants/money_greed
+#
 tellraw @s[scores={temp=..-1}] {"rawtext":[{"translate":"overflow"}]}
 
 #enchants
+
 execute @s[tag=mine_sat_fortuna,scores={bal_mine=100..}] ~ ~ ~ function mine/satchel/enchants/fortuna
 execute @s[tag=mine_sat_devorer,scores={bal_mine=100..}] ~ ~ ~ function mine/satchel/enchants/devorer
 execute @s[tag=mine_sat_explosion,scores={bal_mine=100..}] ~ ~ ~ function mine/satchel/enchants/explosion
