@@ -21,7 +21,7 @@
 			"rand": {
 				"randomize": [
 					{
-						"weight": 1010,
+						"weight": 600,
 						"run_command": {
 							"command": [
 								"setblock ~~~ cr:l2"
