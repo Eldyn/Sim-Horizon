@@ -19,6 +19,14 @@
 			}
 		},
 		"component_groups": {
+			"mark_2":{
+				"minecraft:mark_variant":{
+					 "value": 3
+				},
+				"minecraft:scale": {
+					 "value": 2
+				}
+			},
 			"level_1": {
 				"minecraft:mark_variant": {
 					"value": 0
@@ -38,14 +46,6 @@
 				},
 				"minecraft:scale": {
 					"value": 1
-				}
-			},
-			"mark_2":{
-				"minecraft:mark_variant":{
-					 "value": 3
-				},
-				"minecraft:scale": {
-					 "value": 2
 				}
 			}
 		},
