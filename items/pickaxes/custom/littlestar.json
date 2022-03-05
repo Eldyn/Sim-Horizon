@@ -90,7 +90,8 @@
 						"run_command": {
 							"target": "self",
 							"command": [
-								"scoreboard players add @s mine_damage 2"
+								"scoreboard players add @s mine_damage 2",
+								"playsound note.bit @s ~ ~ ~ 1 1.25 1"
 							]
 						}
 					},
