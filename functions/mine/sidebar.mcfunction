@@ -1,0 +1,1 @@
+titleraw @s[tag=!sidebar_disabled,tag=!sidebar_green,tag=!sidebar_red,tag=!sidebar_purple,tag=!sidebar_yellow] actionbar {"rawtext":[{"text":"§b§lSimulation Horizon§r\n\n§7"},{"translate":"sidebar.playtime"},{"score":{"name": "@s","objective":"h"}},{"text":"§7h §f"},{"score":{"name":"@a","objective":"m"}},{"text":"§7m\n\n"},{"translate":"sidebar.mine"}]}
