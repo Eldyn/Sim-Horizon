@@ -185,7 +185,7 @@
 						"name": {
 							"rawtext": [
 								{
-									"translate": "ui.onix.button.pickaxe_free"
+									"translate": "ui.onix.button.pf"
 								},
 								{
 									"with": [
@@ -286,9 +286,9 @@
 							]
 						},
 						"commands": [
-							"/tag @initiator[scores={bal=2000..}] add give_pickaxe",
-							"/execute @initiator[scores={bal=2000..}] ~ ~ ~ setblock 1252 53 1220 cr:pickaxe_block",
-							"/scoreboard players remove @initiator[scores={bal=2000..}] remove bal 2000"
+							"/tag @initiator[scores={bal=2500..}] add give_pickaxe",
+							"/execute @initiator[scores={bal=2500..}] ~ ~ ~ setblock 1252 53 1220 cr:pickaxe_block",
+							"/scoreboard players remove @initiator[scores={bal=2500..}] remove bal 2500"
 						]
 					},
 					{

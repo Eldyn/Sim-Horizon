@@ -83,6 +83,33 @@
 				]
 			},
 			{
+				"scene_tag":"horion_ability_p1",
+				"npc_name": {"rawtext":[{"text":"§f§lHorion"}]},
+				"text": {"rawtext":[{"translate":"ui.horion.ability_p1"}]},
+				"buttons":[
+					{ "name": {"rawtext":[{"rawtext":"§l<"}]},"commands":[]},
+					{ "name": {"rawtext":[{"rawtext":"\uF000"}]},"commands":[
+						"/execute @initiator[tag=!a1] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a1_buy",
+						"/execute @initiator[tag=a1] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a1"
+					]},
+					{ "name": {"rawtext":[{"rawtext":"\uF000"}]},"commands":[
+						"/execute @initiator[tag=!a2] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a2_buy",
+						"/execute @initiator[tag=a2] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a2"
+					]},
+					{ "name": {"rawtext":[{"rawtext":"\uF000"}]},"commands":[
+						"/execute @initiator[tag=!a3] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a3_buy",
+						"/execute @initiator[tag=a3] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a3"
+					]},
+					{ "name": {"rawtext":[{"rawtext":"\uF000"}]},"commands":[
+						"/execute @initiator[tag=!a4] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a4_buy",
+						"/execute @initiator[tag=a4] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a4"
+					]},
+					{ "name": {"rawtext":[{"rawtext":"§l>"}]},"commands":[
+						"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_ability_p2"
+					]}
+				]
+			},
+			{
 				"scene_tag":"horion_skin",
 				"npc_name": {"rawtext":[{"text":"§f§lHorion"}]},
 				"text": {"rawtext":[{"translate":"ui.horion"}]},
