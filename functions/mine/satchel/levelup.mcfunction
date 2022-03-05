@@ -11,6 +11,9 @@ scoreboard players add @s mine_sat_lvl 1
 particle cr:levelup
 playsound random.levelup @s
 tellraw @s {"rawtext":[{"translate":"mine.satchel.levelup"}]}
+#punti livello
+scoreboard players add @s mine_pl 1
+
 
 #aumento max livello + livello*12
 scoreboard players operation @s temp = @s mine_sat_lvl
