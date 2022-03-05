@@ -99,7 +99,14 @@
 						},
 						{
 							"translate": "ui.onix.about1"
+						},
+						{
+							"text": "\n"
+						},
+						{
+							"translate": "ui.onix.about2"
 						}
+
 					]
 				},
 				"buttons": [
