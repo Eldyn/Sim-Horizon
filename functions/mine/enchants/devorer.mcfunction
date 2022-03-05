@@ -12,7 +12,6 @@ fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:mine_l3_com2
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:mine_l3_rare
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:mine_l4_com1
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:mine_l4_com2
-fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:mine_l4_rare
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:mattoni
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:oro
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air 0 replace cr:roccia

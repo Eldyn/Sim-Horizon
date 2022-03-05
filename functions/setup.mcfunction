@@ -32,8 +32,11 @@ scoreboard objectives add s dummy
 scoreboard objectives add m dummy
 scoreboard objectives add h dummy
 
+scoreboard objectives add mine_pl dummy
+scoreboard objectives add mine_pp dummy
 
 scoreboard players set mine_xpcap vars 12
 scoreboard players set a2 vars 2
 scoreboard players set a3 vars 3
 scoreboard players set a5 vars 5
+scoreboard players set a100 vars 100

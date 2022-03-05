@@ -3,21 +3,20 @@
 
 
 
-#max soldi
-scoreboard players operation @s temp = @s mine_sat_m
-scoreboard players operation @s temp -= @s bal_mine
-scoreboard players operation @s[scores={temp=..-1}] bal_mine = @s mine_sat_m
-#enchant
-execute @s[tag=mine_sat_mgreed,scores={temp=..0}] ~ ~ ~ function  mine/satchel/enchants/money_greed
-#
-tellraw @s[scores={temp=..-1}] {"rawtext":[{"translate":"overflow"}]}
+#percentuale soldi
+scoreboard players operation @s temp = @s bal_mine
+scoreboard players operation @s temp *= a100 vars
+scoreboard players operation @s temp /= @s mine_sat_m
+
+#max
+scoreboard players operation @s[scores={temp=100..}] bal_mine = @s mine_sat_m
+tellraw @s[scores={temp=100..}] {"rawtext":[{"translate":"overflow"}]}
 
 #enchants
-
-execute @s[tag=mine_sat_fortuna,scores={bal_mine=100..}] ~ ~ ~ function mine/satchel/enchants/fortuna
-execute @s[tag=mine_sat_devorer,scores={bal_mine=100..}] ~ ~ ~ function mine/satchel/enchants/devorer
-execute @s[tag=mine_sat_explosion,scores={bal_mine=100..}] ~ ~ ~ function mine/satchel/enchants/explosion
-execute @s[tag=mine_sat_solo,scores={bal_mine=100..}] ~ ~ ~ function mine/satchel/enchants/solo_leveling
+execute @s[tag=mine_sat_fortuna,scores={temp=75..}] ~ ~ ~ function mine/satchel/enchants/fortuna
+execute @s[tag=mine_sat_devorer,scores={temp=100..}] ~ ~ ~ function mine/satchel/enchants/devorer
+execute @s[tag=mine_sat_explosion,scores={temp=100..}] ~ ~ ~ function mine/satchel/enchants/explosion
+execute @s[tag=mine_sat_solo,scores={temp=100..}] ~ ~ ~ function mine/satchel/enchants/solo_leveling
 
 
 #scala livello

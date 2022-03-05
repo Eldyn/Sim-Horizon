@@ -19,7 +19,7 @@
 			}
 		},
 		"component_groups": {
-			"mark_2":{
+			"zero":{
 				"minecraft:mark_variant":{
 					 "value": 3
 				},
@@ -151,6 +151,13 @@
 				"add": {
 					"component_groups": [
 						"level_3"
+					]
+				}
+			},
+			"zero": {
+				"add": {
+					"component_groups": [
+						"zero"
 					]
 				}
 			}

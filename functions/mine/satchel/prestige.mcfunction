@@ -6,3 +6,6 @@ scoreboard players set @s mine_sat_m 128
 scoreboard players set @s mine_sat_lvl 1
 particle cr:prestige
 playsound random.levelup @s ~ ~ ~ 1 2
+
+#punti prestigio
+scoreboard players add @s mine_pp 1
