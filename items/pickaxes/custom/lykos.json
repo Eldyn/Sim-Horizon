@@ -197,7 +197,7 @@
 			},
 			"l1_com1": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 1",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -209,7 +209,7 @@
 			},
 			"l1_com2": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 1",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -221,7 +221,7 @@
 			},
 			"l2_com1": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 2",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -233,7 +233,7 @@
 			},
 			"l2_com2": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 2",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -245,7 +245,7 @@
 			},
 			"l3_com1": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 3",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -257,7 +257,7 @@
 			},
 			"l3_com2": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 3",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -269,7 +269,7 @@
 			},
 			"l4_com1": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 4",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -281,7 +281,7 @@
 			},
 			"l4_com2": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 4",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -293,7 +293,7 @@
 			},
 			"l1_rare": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 1",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -305,7 +305,7 @@
 			},
 			"l2_rare": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 2",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -317,7 +317,7 @@
 			},
 			"l3_rare": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 3",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
@@ -329,7 +329,7 @@
 			},
 			"l4_rare": {
 				"run_command": {
-					"target": "self",
+					"target": "holder",
 					"command": [
 						"scoreboard players add temp vars 4",
 						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
