@@ -29,6 +29,7 @@
 					"command": [
 						"scoreboard players remove @s mine_damage 1",
 						"scoreboard players add mined vars 1",
+						"scoreboard players set temp vars 2",
 						"scoreboard players add @s s_mine_dig_stone 1",
 						"scoreboard players add @s s_mine_dig 1"
 					],

@@ -24,7 +24,8 @@
 			"dig": {
 				"run_command": {
 					"command": [
-						"scoreboard players add mined vars 1"
+						"scoreboard players add mined vars 1",
+						"scoreboard players add @s bal_mine 2"
 					],
 					"target": "player"
 				}

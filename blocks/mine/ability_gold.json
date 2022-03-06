@@ -25,7 +25,7 @@
 					"command": [
 						"scoreboard players remove @s mine_damage 1",
 						"scoreboard players add mined vars 1",
-						"scoreboard players set temp vars 10",
+						"scoreboard players set temp vars 20",
 						"scoreboard players operation @s bal_mine += temp vars"
 					],
 					"target": "player"

@@ -29,7 +29,7 @@
 						"scoreboard players add @s s_mine_dig_com 1",
 						"scoreboard players add @s s_mine_dig 1",
 						"scoreboard players add mined vars 1",
-						"scoreboard players set temp vars 1",
+						"scoreboard players set temp vars 6",
 						"scoreboard players operation @s bal_mine += temp vars"
 					],
 					"target": "player"
