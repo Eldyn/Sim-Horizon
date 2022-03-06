@@ -21,7 +21,7 @@
 			"rand": {
 				"randomize": [
 					{
-						"weight": 600,
+						"weight": 80,
 						"run_command": {
 							"command": [
 								"setblock ~~~ cr:l4"
@@ -29,7 +29,7 @@
 						}
 					},
 					{
-						"weight": 70,
+						"weight": 7,
 						"run_command": {
 							"command": [
 								"setblock ~~~ cr:mine_l4_com1"
@@ -37,7 +37,7 @@
 						}
 					},
 					{
-						"weight": 70,
+						"weight": 7,
 						"run_command": {
 							"command": [
 								"setblock ~~~ cr:mine_l4_com2"
@@ -45,7 +45,7 @@
 						}
 					},
 					{
-						"weight": 10,
+						"weight": 5,
 						"run_command": {
 							"command": [
 								"setblock ~~~ cr:mine_l4_rare"
