@@ -1,13 +1,8 @@
 
-
-
-
-
 #percentuale soldi
 scoreboard players operation @s temp = @s bal_mine
 scoreboard players operation @s temp *= a100 vars
 scoreboard players operation @s temp /= @s mine_sat_m
-scoreboard players operation @s mine_perc = @s temp
 
 #max
 scoreboard players operation @s[scores={temp=100..}] bal_mine = @s mine_sat_m

@@ -40,4 +40,4 @@ scoreboard players set a2 vars 2
 scoreboard players set a3 vars 3
 scoreboard players set a5 vars 5
 scoreboard players set a100 vars 100
-scoreboard players add @a tokens 0
+scoreboard players set @a tokens 0
