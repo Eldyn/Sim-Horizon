@@ -26,9 +26,6 @@
 						"scoreboard players remove @s mine_damage 1",
 						"scoreboard players add mined vars 1",
 						"scoreboard players set temp vars 50",
-						"playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
-						"titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
-						"titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f §64Tuna\"}]}",
 						"scoreboard players operation @s bal_mine += temp vars"
 					],
 					"target": "player"
