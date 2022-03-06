@@ -83,7 +83,7 @@
 			},
 			"minecraft:hand_equipped": true,
 			"minecraft:display_name": {
-				"value": "Wall-E"
+				"value": "Wall-E\nOverclock II\nSystem RECM"
 			},
 			"minecraft:enchantable": {
 				"slot": "pickaxe"
@@ -94,7 +94,7 @@
 			"enchant": {
 				"randomize": [
 					{
-						"weight": 60,
+						"weight": 6,
 						"run_command": {
 							"target": "self",
 							"command": [
@@ -107,12 +107,12 @@
 						"run_command": {
 							"target": "self",
 							"command": [
-								"function mine/enchants/recm1"
+								"function mine/enchants/recm2"
 							]
 						}
 					},
 					{
-						"weight": 900
+						"weight": 100
 					}
 				]
 			}
