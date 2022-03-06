@@ -1,0 +1,4 @@
+fill 1220 11 1220 1239 30 1239 cr:mine_gen_l1
+fill 1220 16 1220 1234 30 1234 cr:mine_gen_l2
+fill 1220 21 1220 1229 30 1229 cr:mine_gen_l3
+fill 1220 36 1220 1224 30 1224 cr:mine_gen_l4
