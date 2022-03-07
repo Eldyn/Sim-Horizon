@@ -40,6 +40,7 @@
 					]}
 				]
 			},
+			// free pickaxe roll
 			{
 				"scene_tag": "roll_pickaxe",
 				"text": {"rawtext": [{"text": "NPC_FullScreen"},{"translate": "ui.onix.roll_pickaxe"},{"with": ["\n"]}]},
