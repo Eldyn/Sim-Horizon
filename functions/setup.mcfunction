@@ -41,5 +41,6 @@ scoreboard players set a2 vars 2
 scoreboard players set a3 vars 3
 scoreboard players set a9 vars 9
 scoreboard players set a5 vars 5
+scoreboard players set a250 vars 250
 scoreboard players set a100 vars 100
 scoreboard players set @a tokens 0

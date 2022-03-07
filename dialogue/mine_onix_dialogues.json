@@ -1,259 +1,66 @@
 {
 	"format_version": "1.17.40",
 	"minecraft:npc_dialogue": {
-		"scenes": [
-			{
+		"scenes": [{
 				"scene_tag": "onix_hub",
-				"npc_name": {
-					"rawtext": [
-						{
-							"text": "§f§lOnix"
-						}
-					]
-				},
-				"text": {
-					"rawtext": [
-						{
-							"text": "NPC_MainScreen"
-						},
-						{
-							"translate": "ui.onix.hub"
-						},
-						{
-							"with": [
-								"\n"
-							]
-						}
-					]
-				},
+				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
+				"text": {"rawtext": [{"text": "NPC_MainScreen"},{"translate": "ui.onix.hub"},{"with": ["\n"]}]},
 				"buttons": [
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.onix.button.roll"
-								}
-							]
-						},
-						"commands": [
-							"/execute @initiator[scores={i_mine_pickaxe=-2000}] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe",
-							"/execute @initiator[tag=mine_clotus] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe",
-							"/execute @initiator[scores={i_mine_pickaxe=0..},tag=!mine_clotus] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe_pay"
-						]
-					},
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.onix.button.about"
-								}
-							]
-						},
-						"commands": [
+					{ "name": {"rawtext":[{"translate": "ui.onix.button.roll"}]},"commands": [
+						"/execute @initiator[scores={i_mine_pickaxe=-2000}] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe",
+						"/execute @initiator[tag=mine_clotus] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe",
+						"/execute @initiator[scores={i_mine_pickaxe=0..},tag=!mine_clotus] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe_pay"
+					]},
+					{ "name": {"rawtext": [{"translate": "ui.onix.button.about"}]},"commands": [
 							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s onix_about"
-						]
-					},
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.onix.button.about_spamton"
-								}
-							]
-						},
-						"commands": [
+					]},
+					{ "name": {"rawtext": [{"translate": "ui.onix.button.about_spamton"}]},"commands": [
 							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s onix_about_spamton"
-						]
-					},
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.onix.button.quit"
-								}
-							]
-						},
-						"commands": []
-					}
+					]},
+					{ "name": {"rawtext": [{"translate": "ui.onix.button.quit"}]},"commands": []}
 				]
 			},
 			{
 				"scene_tag": "onix_about",
-				"npc_name": {
-					"rawtext": [
-						{
-							"text": "§f§lOnix"
-						}
-					]
-				},
-				"text": {
-					"rawtext": [
-						{
-							"text": "NPC_FullScreen"
-						},
-						{
-							"translate": "ui.onix.about"
-						},
-						{
-							"text": "\n"
-						},
-						{
-							"translate": "ui.onix.about1"
-						},
-						{
-							"text": "\n"
-						},
-						{
-							"translate": "ui.onix.about2"
-						}
-
-					]
-				},
+				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
+				"text": {"rawtext": [{"text": "NPC_FullScreen"},{"translate": "ui.onix.about"},{"text": "\n"},{"translate": "ui.onix.about1"},{"text": "\n"},{"translate": "ui.onix.about2"}]},
 				"buttons": [
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.back"
-								}
-							]
-						},
-						"commands": [
-							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
-						]
-					}
+					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [
+						"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
+					]}
 				]
 			},
 			{
 				"scene_tag": "onix_about_spamton",
-				"npc_name": {
-					"rawtext": [
-						{
-							"text": "§f§lOnix"
-						}
-					]
-				},
-				"text": {
-					"rawtext": [
-						{
-							"text": "NPC_FullScreen"
-						},
-						{
-							"translate": "ui.onix.about_spamton"
-						},
-						{
-							"with": [
-								"\n"
-							]
-						}
-					]
-				},
+				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
+				"text": {"rawtext": [{"text": "NPC_FullScreen"},{"translate": "ui.onix.about_spamton"},{"with": ["\n"]}]},
 				"buttons": [
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.back"
-								}
-							]
-						},
-						"commands": [
-							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
-						]
-					}
+					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [
+						"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
+					]}
 				]
 			},
 			{
 				"scene_tag": "roll_pickaxe",
-				"text": {
-					"rawtext": [
-						{
-							"text": "NPC_FullScreen"
-						},
-						{
-							"translate": "ui.onix.roll_pickaxe"
-						},
-						{
-							"with": [
-								"\n"
-							]
-						}
-					]
-				},
-				"npc_name": {
-					"rawtext": [
-						{
-							"text": "§f§lOnix"
-						}
-					]
-				},
+				"text": {"rawtext": [{"text": "NPC_FullScreen"},{"translate": "ui.onix.roll_pickaxe"},{"with": ["\n"]}]},
+				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
 				"buttons": [
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.onix.button.pf"
-								},
-								{
-									"with": [
-										"\n"
-									]
-								}
-							]
-						},
-						"commands": [
-							"/setblock 1252 53 1220 cr:pickaxe_block",
-							"/tag @initiator add give_pickaxe"
-						]
-					}
+					{ "name": {"rawtext": [{"translate": "ui.onix.button.pf"},{"with": ["\n"]}]},"commands": [
+						"/setblock 1252 53 1220 cr:pickaxe_block",
+						"/tag @initiator add give_pickaxe"
+					]}
 				]
 			},
 			{
 				"scene_tag": "roll_pickaxe_pay",
-				"npc_name": {
-					"rawtext": [
-						{
-							"text": "§f§lOnix"
-						}
-					]
-				},
-				"text": {
-					"rawtext": [
-						{
-							"text": "NPC_FullScreen"
-						},
-						{
-							"translate": "ui.onix.roll_pickaxe_pay"
-						},
-						{
-							"with": [
-								"\n"
-							]
-						}
-					]
-				},
+				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
+				"text": {"rawtext": [{"text": "NPC_FullScreen"},{"translate": "ui.onix.roll_pickaxe_pay"},{"with": ["\n"]}]},
 				"buttons": [
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.onix.button.pickaxe_pay"
-								}
-							]
-						},
-						"commands": [
+					{ "name": {"rawtext": [{"translate": "ui.onix.button.pickaxe_pay"}]},"commands": [
 							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe_pay_confirm"
 						]
 					},
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.back"
-								}
-							]
-						},
-						"commands": [
+					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [
 							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
 						]
 					}
@@ -261,52 +68,16 @@
 			},
 			{
 				"scene_tag": "roll_pickaxe_pay_confirm",
-				"npc_name": {
-					"rawtext": [
-						{
-							"translate": "ui.warning"
-						}
-					]
-				},
-				"text": {
-					"rawtext": [
-						{
-							"text": "NPC_WarningScreen"
-						},
-						{
-							"translate": "ui.onix.roll_pickaxe_pay_confirm"
-						},
-						{
-							"with": [
-								"\n"
-							]
-						}
-					]
-				},
+				"npc_name": {"rawtext": [{"translate": "ui.warning"}]},
+				"text": {"rawtext": [{"text": "NPC_WarningScreen"},{"translate": "ui.onix.roll_pickaxe_pay_confirm"},{"with": ["\n"]}]},
 				"buttons": [
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.onix.confirm"
-								}
-							]
-						},
-						"commands": [
+					{ "name": {"rawtext": [{"translate": "ui.onix.confirm"}]},"commands": [
 							"/tag @initiator[scores={bal=2500..}] add give_pickaxe",
 							"/execute @initiator[scores={bal=2500..}] ~ ~ ~ setblock 1252 53 1220 cr:pickaxe_block",
 							"/scoreboard players remove @initiator[scores={bal=2500..}] remove bal 2500"
 						]
 					},
-					{
-						"name": {
-							"rawtext": [
-								{
-									"translate": "ui.back"
-								}
-							]
-						},
-						"commands": [
+					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [
 							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
 						]
 					}
