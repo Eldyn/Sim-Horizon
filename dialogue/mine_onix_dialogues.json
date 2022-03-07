@@ -2,6 +2,7 @@
 	"format_version": "1.17.40",
 	"minecraft:npc_dialogue": {
 		"scenes": [{
+			//main onix scene
 				"scene_tag": "onix_hub",
 				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
 				"text": {"rawtext": [{"text": "NPC_MainScreen"},{"translate": "ui.onix.hub"},{"with": ["\n"]}]},
@@ -20,6 +21,7 @@
 					{ "name": {"rawtext": [{"translate": "ui.onix.button.quit"}]},"commands": []}
 				]
 			},
+			//about onix
 			{
 				"scene_tag": "onix_about",
 				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
@@ -30,6 +32,7 @@
 					]}
 				]
 			},
+			//about spamton
 			{
 				"scene_tag": "onix_about_spamton",
 				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
@@ -52,6 +55,7 @@
 					]}
 				]
 			},
+			//paid pickaxe roll
 			{
 				"scene_tag": "roll_pickaxe_pay",
 				"npc_name": {"rawtext": [{"text": "§f§lOnix"}]},
@@ -67,6 +71,7 @@
 					}
 				]
 			},
+			//confirm the paid pickaxe roll
 			{
 				"scene_tag": "roll_pickaxe_pay_confirm",
 				"npc_name": {"rawtext": [{"translate": "ui.warning"}]},
