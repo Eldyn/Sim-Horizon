@@ -49,4 +49,4 @@ give @s[scores={i_mine_pickaxe=48}] cr:pickaxe_c_ulysses 1 0 {"item_lock":{"mode
 give @s[scores={i_mine_pickaxe=49}] cr:pickaxe_c_kentaro 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_rare","cr:mine_l2_rare","cr:mine_l3_rare","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
 give @s[scores={i_mine_pickaxe=50}] cr:pickaxe_c_littlestar 1 0 {"item_lock":{"mode":"lock_in_inventory"},"can_destroy":{"blocks":["cr:l1","cr:l2","cr:l3","cr:l4","cr:l5","cr:luckyhblock","cr:mine_l1_rare","cr:mine_l2_rare","cr:mine_l3_rare","cr:mine_l4_rare","cr:mattoni","cr:oro","cr:roccia"]}}
 
-give @s[scores={i_mine_satchel=1}] cr:mine_satchel
+give @s[scores={i_mine_satchel=0}] cr:mine_satchel

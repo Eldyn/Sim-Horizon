@@ -78,9 +78,9 @@
 				"text": {"rawtext": [{"text": "NPC_WarningScreen"},{"translate": "ui.onix.roll_pickaxe_pay_confirm"},{"with": ["\n"]}]},
 				"buttons": [
 					{ "name": {"rawtext": [{"translate": "ui.onix.confirm"}]},"commands": [
-							"/tag @initiator[scores={bal=2500..}] add give_pickaxe",
-							"/execute @initiator[scores={bal=2500..}] ~ ~ ~ setblock 1252 53 1220 cr:pickaxe_block",
-							"/scoreboard players remove @initiator[scores={bal=2500..}] remove bal 2500"
+							"/tag @initiator[scores={bal=700..}] add give_pickaxe",
+							"/execute @initiator[scores={bal=700..}] ~ ~ ~ setblock 1252 53 1220 cr:pickaxe_block",
+							"/scoreboard players remove @initiator[scores={bal=700..}] bal 700"
 						]
 					},
 					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [

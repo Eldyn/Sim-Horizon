@@ -6,6 +6,7 @@ tag @s remove mine_relife
 tag @s remove mine_atropos
 tag @s remove mine_clotus
 tag @s remove mine_berserker
+tag @s remove mine_berserk
 
 clear
 give @s cr:traveler
