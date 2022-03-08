@@ -68,42 +68,34 @@
                     },
                     {
                         "speed": 13,
-                        "block": {
-                            "tags": "query.any_tag('cr:l1_com')"
-                        },
+                        "block": "cr:l1",
                         "on_dig": {
-                            "event": "l1_com",
-                            "target": "self"
+                            "event": "stone",
+                            "target": "holder"
                         }
                     },
                     {
                         "speed": 13,
-                        "block": {
-                            "tags": "query.any_tag('cr:l2_com')"
-                        },
+                        "block": "cr:l2",
                         "on_dig": {
-                            "event": "l2_com",
-                            "target": "self"
+                            "event": "stone",
+                            "target": "holder"
                         }
                     },
                     {
                         "speed": 6,
-                        "block": {
-                            "tags": "query.any_tag('cr:l3_com')"
-                        },
+                        "block": "cr:l3",
                         "on_dig": {
-                            "event": "l3_com",
-                            "target": "self"
+                            "event": "stone",
+                            "target": "holder"
                         }
                     },
                     {
                         "speed": 13,
-                        "block": {
-                            "tags": "query.any_tag('cr:l4_com')"
-                        },
+                        "block": "cr:l4",
                         "on_dig": {
-                            "event": "l4_com",
-                            "target": "self"
+                            "event": "stone",
+                            "target": "holder"
                         }
                     }
                 ]
@@ -136,35 +128,11 @@
             "tag:cr:pickaxe": {}
         },
         "events": {
-            "l1_com": {
+            "stone": {
                 "run_command": {
                     "target": "self",
                     "command": [
-                        "scoreboard players add @s bal_mine 1"
-                    ]
-                }
-            },
-            "l2_com": {
-                "run_command": {
-                    "target": "self",
-                    "command": [
-                        "scoreboard players add @s bal_mine 2"
-                    ]
-                }
-            },
-            "l3_com": {
-                "run_command": {
-                    "target": "self",
-                    "command": [
-                        "scoreboard players add @s bal_mine 3"
-                    ]
-                }
-            },
-            "l4_com": {
-                "run_command": {
-                    "target": "self",
-                    "command": [
-                        "scoreboard players add @s bal_mine 4"
+                        "scoreboard players add @s bal_mine 5"
                     ]
                 }
             },
@@ -172,10 +140,6 @@
                 "run_command": {
                     "target": "self",
                     "command": [
-                        "scoreboard players add temp vars 1",
-                        "playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
-                        "titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
-                        "titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f KiloByte\"}]}",
                         "scoreboard players add @s bal_mine 1"
                     ]
                 }
@@ -184,10 +148,6 @@
                 "run_command": {
                     "target": "self",
                     "command": [
-                        "scoreboard players add temp vars 2",
-                        "playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
-                        "titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
-                        "titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f KiloByte\"}]}",
                         "scoreboard players add @s bal_mine 2"
                     ]
                 }
@@ -196,10 +156,6 @@
                 "run_command": {
                     "target": "self",
                     "command": [
-                        "scoreboard players add temp vars 3",
-                        "playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
-                        "titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
-                        "titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f KiloByte\"}]}",
                         "scoreboard players add @s bal_mine 3"
                     ]
                 }
@@ -208,10 +164,6 @@
                 "run_command": {
                     "target": "self",
                     "command": [
-                        "scoreboard players add temp vars 4",
-                        "playsound item.trident.riptide_1 @s ~~~ 0.5 1.2 0.5",
-                        "titleraw @s subtitle {\"rawtext\":[{\"text\":\"ALERT \"}]}",
-                        "titleraw @s title {\"rawtext\":[{\"text\":\"ALERT\"},{\"translate\":\"alert.earn\"},{\"text\":\"\n§a§l\"},{\"score\":{\"objective\":\"vars\",\"name\":\"temp\"}},{\"text\":\"§r§f KiloByte\"}]}",
                         "scoreboard players add @s bal_mine 4"
                     ]
                 }
