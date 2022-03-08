@@ -29,6 +29,14 @@
 								"function mine/satchel/use"
 							]
 						},
+						"condition": "!query.is_sneaking"
+					},
+					{
+						"run_command": {
+							"command": [
+								"function mine/satchel/check"
+							]
+						},
 						"condition": "query.is_sneaking"
 					}
 				]
