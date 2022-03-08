@@ -1,0 +1,1 @@
+tellraw @s {"rawtext":[{"translate":"sidebar.satchel"},{"score":{"name":"@s","objective":"bal_mine"}},{"text":"/"},{"score":{"name":"@s","objective":"mine_sat_m"}}]}
