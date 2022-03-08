@@ -52,11 +52,7 @@
 					},
 					{
 						"speed": 100,
-						"block": "cr:mattoni",
-						"on_dig": {
-							"event": "enchant",
-							"target": "self"
-						}
+						"block": "cr:mattoni"
 					}
 				]
 			},

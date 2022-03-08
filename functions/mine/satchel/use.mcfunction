@@ -9,10 +9,8 @@ scoreboard players operation @s[scores={temp=100..}] bal_mine = @s mine_sat_m
 tellraw @s[scores={temp=100..}] {"rawtext":[{"translate":"overflow"}]}
 
 #enchants
-execute @s[tag=mine_sat_fortuna,scores={temp=75..}] ~ ~ ~ function mine/satchel/enchants/fortuna
-execute @s[tag=mine_sat_devorer,scores={temp=100..}] ~ ~ ~ function mine/satchel/enchants/devorer
-execute @s[tag=mine_sat_explosion,scores={temp=100..}] ~ ~ ~ function mine/satchel/enchants/explosion
-execute @s[tag=mine_sat_solo,scores={temp=100..}] ~ ~ ~ function mine/satchel/enchants/solo_leveling
+execute @s[tag=mine_sat_fortuna,scores={temp=75..,mine_sat_lvl=15..}] ~ ~ ~ function mine/satchel/enchants/fortuna
+execute @s[tag=mine_sat_devorer,scores={temp=100..,mine_sat_lvl=20..}] ~ ~ ~ function mine/satchel/enchants/devorer
 
 
 #scala livello
