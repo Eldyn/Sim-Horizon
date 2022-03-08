@@ -1,8 +1,7 @@
 #aumento max satchel + livello*9
 scoreboard players operation @s temp = @s mine_sat_lvl
-scoreboard players operation @s temp *= a3 vars
+scoreboard players operation @s temp *= a9 vars
 scoreboard players operation @s mine_sat_m += @s temp
-
 
 
 #resetta xp aumenta livello

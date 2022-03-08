@@ -32,10 +32,11 @@ scoreboard objectives add tokens dummy
 scoreboard objectives add s dummy
 scoreboard objectives add m dummy
 scoreboard objectives add h dummy
-scoreboard objectives add mine_pl dummy
 scoreboard objectives add mine_perc dummy
 scoreboard objectives add mine_xpperc dummy
 scoreboard objectives add mine_pp dummy
+scoreboard objectives add mine_pl dummy
+scoreboard objectives add mine_batteries dummy
 scoreboard players set mine_xpcap vars 36
 scoreboard players set a2 vars 2
 scoreboard players set a3 vars 3
