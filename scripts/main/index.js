@@ -2,6 +2,7 @@ import { system, world, ItemStack, ItemType, MinecraftItemTypes, Items } from "@
 import { ModalFormData, MessageFormData, ActionFormData } from "@minecraft/server-ui";
 import { EnchantList } from "../data/mine_data";
 
+async function clamp(n, min, max) { return n < min ? min : n > max ? max : n };
 async function randomEnchant(player) {
     //? Because we cannot create locked items with gametest, we create one using replaceitem, we will then clone it and modify it, later removing this one.
     let enchantNumber = 0;
@@ -51,47 +52,43 @@ async function randomEnchant(player) {
         }
     }
     function removeDuplicates(arr) {
-        // create an empty array to store unique items
-        const uniqueItems = [];
-      
-        // loop through the array and add each item to the unique items array
-        arr.forEach(item => {
-          // check if the item already exists in the unique items array
-          let exists = uniqueItems.find(uniqueItem => {
-            // compare the enchantName, type, and level properties of the item and the unique item
-            return (
-              item.enchantName === uniqueItem.enchantName &&
-              item.type === uniqueItem.type &&
-              item.maxLevel === uniqueItem.maxLevel &&
-              item.level === uniqueItem.level &&
-              item.perLevelWeight === uniqueItem.perLevelWeight &&
-              item.weight === uniqueItem.weight
-            );
-          });
-      
-          // if the item does not already exist, add it to the unique items array
-          if (!exists) {
-            uniqueItems.push(item);
-          }
+      // create an empty array to store unique items
+      const uniqueItems = [];
+    
+      // loop through the array and add each item to the unique items array
+      arr.forEach(item => {
+        // check if the item already exists in the unique items array
+        let exists = uniqueItems.find(uniqueItem => {
+          // use the equals method to compare the two Enchant instances
+          return item.equals(uniqueItem);
         });
-      
-        // return the array of unique items
-        return uniqueItems;
+    
+        // if the item does not already exist, add it to the unique items array
+        if (!exists) {
+          uniqueItems.push(item);
+        }
+      });
+    
+      // return the array of unique items
+      return uniqueItems;
     }
-
+    
+    //? roll enchants
     const enchants = []
     for (let i = 0; i < randomEnchantNumber(EnchantList.length); i++)
     {
         enchants.push(roll())
     }
 
+    //? remove duplicate enchants from the array, then roll the levels for each unique enchant.
     const uniqueEnchants = removeDuplicates(enchants)
+
     uniqueEnchants.forEach((enchant) => {
-        enchant.rollLevel()
-        console.warn(enchant.enchantName)
+      //! I don't know if this both sets enchantNumber to the rolled level and sets the class instance's level to it.
+      enchantNumber += enchant.rollLevel()
     })
 
-    item.nameTag = "Amogus"
+    item.nameTag = "da fare il roll del nome"
     inventory.setItem(player.selectedSlot, item)
 
     player.removeTag('randomPickaxe')
