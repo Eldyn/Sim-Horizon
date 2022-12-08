@@ -37,6 +37,12 @@ scoreboard objectives add mine_xpperc dummy
 scoreboard objectives add mine_pp dummy
 scoreboard objectives add mine_pl dummy
 scoreboard objectives add mine_batteries dummy
+scoreboard objectives add temp1 dummy
+scoreboard objectives add temp2 dummy
+scoreboard objectives add temp3 dummy
+scoreboard objectives add temp4 dummy
+scoreboard objectives add temp5 dummy
+
 scoreboard players set mine_xpcap vars 36
 scoreboard players set a2 vars 2
 scoreboard players set a3 vars 3

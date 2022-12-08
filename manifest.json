@@ -1,85 +1,57 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "§cCraft Royale §l§bBP NUOVO",
-		"uuid": "53edf9a8-3be2-e51e-cba7-7146c024c1d2",
-		"version": [
-			1,
-			0,
-			1
-		],
-		"min_engine_version": [
-			1,
-			17,
-			0
-		]
+	  "name": "Simulation Horizon §3§lBP",
+	  "description": "Simulation Horizon Pack",
+	  "uuid": "50c29abc-cb4a-b05c-67d7-72a312b0e932",
+	  "version": [
+		1,
+		0,
+		0
+	  ],
+	  "min_engine_version": [
+		1,
+		17,
+		0
+	  ]
 	},
 	"modules": [
-		{
-			"type": "data",
-			"uuid": "5a2b138d-e3cd-97ae-6c9c-01e6abe06c21",
-			"version": [
-				1,
-				0,
-				0
-			]
-		},
-		{
-			"type": "javascript",
-			"uuid": "088a69f1-77e5-41b5-99c1-28c1210507e0",
-			"entry": "scripts/index.js",
-			"version": [
-				1,
-				0,
-				0
-			]
-		}
+	  {
+		"type": "data",
+		"uuid": "4237213b-9b4f-26f8-08f2-4a6b86ee2fb7",
+		"version": [
+		  1,
+		  0,
+		  0
+		]
+	  },
+	  {
+		"type": "script",
+		"language": "javascript",
+		"uuid": "b7055392-4154-4aa8-813f-afa6291f1056",
+		"entry": "scripts/main/index.js",
+		"version": [ 0, 1, 0 ]
+	}
+	],
+	"capabilities": [
+		"script_eval"
 	],
 	"dependencies": [
-		{
-			"uuid": "eb983f00-08bd-03cb-bf47-365221b11cc0",
-			"version": [
-				1,
-				0,
-				1
-			]
-		},
-		{
-			"uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
-			"version": [
-				0,
-				1,
-				0
-			]
-		},
-		{
-			"uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
-			"version": [
-				0,
-				1,
-				0
-			]
-		}
-	],
-	"metadata": {
-		"authors": [
-			"Boris606 & Eldyn"
-		],
-		"generated_with": {
-			"bridge": [
-				"2.1.5",
-				"2.2.0",
-				"2.2.1",
-				"2.2.2",
-				"2.2.3",
-				"2.2.4"
-			],
-			"dash": [
-				"0.5.0",
-				"0.5.1",
-				"0.7.0",
-				"0.7.1"
-			]
-		}
+	  {
+		"uuid": "347bccae-7cec-0e11-5aba-bf62af188c2b",
+		"version": [
+		  1,
+		  0,
+		  0
+		]
+	  },
+	  {
+		"module_name": "@minecraft/server",
+		"version": "1.1.0-beta"
+	},
+	{
+		"module_name": "@minecraft/server-ui",
+		"version": "1.0.0-beta"
 	}
-}
+	]
+  }

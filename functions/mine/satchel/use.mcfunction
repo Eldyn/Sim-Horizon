@@ -6,8 +6,6 @@ scoreboard players operation @s temp /= @s mine_sat_m
 
 #max
 scoreboard players operation @s[scores={temp=100..}] bal_mine = @s mine_sat_m
-tellraw @s[scores={temp=100..}] {"rawtext":[{"translate":"overflow"}]}
-
 #enchants
 execute @s[tag=mine_sat_fortuna,scores={temp=75..,mine_sat_lvl=15..}] ~ ~ ~ function mine/satchel/enchants/fortuna
 execute @s[tag=mine_sat_devorer,scores={temp=100..,mine_sat_lvl=20..}] ~ ~ ~ function mine/satchel/enchants/devorer

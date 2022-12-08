@@ -17,13 +17,8 @@
 							"text": "NPC_StatsScreen"
 						},
 						{
-							"translate": "ui.stats.mine_dig"
-						},
-						{
-							"score": {
-								"objective": "s_mine_dig",
-								"name": "@s"
-							}
+							"translate": "ui.stats.mine_dig",
+							"with": {"rawtext":[{"text":"asdasdasddassda"}]}
 						},
 						{
 							"text": "\n"

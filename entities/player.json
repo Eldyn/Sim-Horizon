@@ -297,7 +297,7 @@
 				},
 				"run_command": {
 					"command": [
-						"execute @s function general_reset"
+						"execute @s ~~~ function general_reset"
 					]
 				}
 			},

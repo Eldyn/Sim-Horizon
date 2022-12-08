@@ -9,7 +9,7 @@ scoreboard players set @s mine_sat_xp 0
 scoreboard players add @s mine_sat_lvl 1
 particle cr:levelup
 playsound cr:levelup @s ~~~ 1 1 1 
-tellraw @s {"rawtext":[{"translate":"mine.satchel.levelup"}]}
+tellraw @s {"rawtext":[{"translate":"mine.levelup"}, {"score": {"name": "@s", "objective": "mine_sat_lvl"}}, {"text": "§e)"}]}
 #punti livello
 scoreboard players add @s mine_pl 1
 

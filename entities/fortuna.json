@@ -8,17 +8,18 @@
 			"is_experimental": false,
 			"runtime_identifier": "minecraft:salmon",
 			"animations": {
-				"4tuna": "controller.animation.fortunaa",
-				"die_timer_fortuna": "animation.die_timer_fortuna"
+				"4tuna": "controller.animation.fortunaa"
 			},
 			"scripts": {
 				"animate": [
-					"4tuna",
-					"die_timer_fortuna"
+					"4tuna"
 				]
 			}
 		},
 		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
 			"zero":{
 				"minecraft:mark_variant":{
 					 "value": 3
@@ -54,6 +55,16 @@
 				"family": [
 					"fortuna"
 				]
+			},
+			"minecraft:timer": {
+				"time": [
+					5,
+					5
+				],
+				"time_down_event": {
+					"event": "despawn",
+					"target": "self"
+				}
 			},
 			"minecraft:collision_box": {
 				"width": 0.5,
@@ -133,6 +144,13 @@
 			"minecraft:conditional_bandwidth_optimization": {}
 		},
 		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
 			"level_1": {
 				"add": {
 					"component_groups": [
