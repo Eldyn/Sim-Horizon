@@ -1,8 +1,8 @@
 import { system, world, ItemStack, ItemType, MinecraftItemTypes, Items } from "@minecraft/server";
 import { ModalFormData, MessageFormData, ActionFormData } from "@minecraft/server-ui";
+import * as Aux from "../functions/auxiliary_functions";
 import { EnchantList } from "../data/mine_data";
 
-async function clamp(n, min, max) { return n < min ? min : n > max ? max : n };
 async function randomEnchant(player) {
     //? Because we cannot create locked items with gametest, we create one using replaceitem, we will then clone it and modify it, later removing this one.
     let enchantNumber = 0;
@@ -82,11 +82,16 @@ async function randomEnchant(player) {
 
     //? remove duplicate enchants from the array, then roll the levels for each unique enchant.
     const uniqueEnchants = removeDuplicates(enchants)
-
+    const outputEnchants = []
     uniqueEnchants.forEach((enchant) => {
       //! I don't know if this both sets enchantNumber to the rolled level and sets the class instance's level to it.
       enchantNumber += enchant.rollLevel()
+      outputEnchants.push(Object.assign(enchant, {
+        enchantName: enchant.enchantName,
+        level: enchant.level}))
     })
+
+
 
     item.nameTag = "da fare il roll del nome"
     inventory.setItem(player.selectedSlot, item)

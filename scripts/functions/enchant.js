@@ -1,4 +1,4 @@
-class Enchant {
+export class Enchant {
     constructor(enchantName, weight, perLevelWeight, maxLevel, type, onTrigger) {
         this.enchantName = enchantName;
         this.weight = weight;
