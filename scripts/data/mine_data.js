@@ -9,3 +9,18 @@ export const EnchantList = [
     new Enchant("Sei", 1000, [100,10,3], 3, "onTick", () => {console.warn("enchant fired")}),
     new Enchant("Sette", 1000, [100,10,3], 3, "onUse", () => {console.warn("enchant fired")})
 ]
+
+export const NamePool = {
+    prefixA: ["a"],
+    nameA: ["aa"],
+    suffixA: ["aaa"],
+    prefixB: ["b"],
+    nameB: ["bb"],
+    suffixB: ["bbb"],
+    prefixC: ["c"],
+    nameC: ["cc"],
+    suffixC: ["ccc"],
+    prefixD: ["d"],
+    nameD: ["dd"],
+    suffixD: ["ddd"],
+}

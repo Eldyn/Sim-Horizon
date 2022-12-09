@@ -1,6 +1,6 @@
 export class Enchant {
-    constructor(enchantName, weight, perLevelWeight, maxLevel, type, onTrigger) {
-        this.enchantName = enchantName;
+    constructor(name, weight, perLevelWeight, maxLevel, type, onTrigger) {
+        this.name = name;
         this.weight = weight;
         this.perLevelWeight = perLevelWeight
         this.maxLevel = maxLevel;
@@ -8,7 +8,7 @@ export class Enchant {
         this.onTrigger = onTrigger;
         this.level = 0;
         this.equals = function(other) {
-          return other.enchantName === this.enchantName
+          return other.name === this.name
         }
     };
     rollLevel() {
