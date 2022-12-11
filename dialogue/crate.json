@@ -28,7 +28,7 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ function crates/click_open"
+							"/execute as @initiator at @s run function crates/click_open"
 						]
 					},
 					{

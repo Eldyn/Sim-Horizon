@@ -97,8 +97,8 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ tag @a[r=1] add rl_joining",
-							"/execute @e[type=cr:cmd,name=rl_generator] ~~~ function rl/easy/make_game"
+							"/execute as @initiator at @s run tag @a[r=1] add rl_joining",
+							"/execute as @e[type=cr:cmd,name=rl_generator] at @s run function rl/easy/make_game"
 						]
 					},
 					{
@@ -110,8 +110,8 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ tag @a[r=1] add rl_joining",
-							"/execute @e[type=cr:cmd,name=rl_generator] ~~~ function rl/normal/make_game"
+							"/execute as @initiator at @s run tag @a[r=1] add rl_joining",
+							"/execute as @e[type=cr:cmd,name=rl_generator] at @s run function rl/normal/make_game"
 						]
 					},
 					{
@@ -123,8 +123,8 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ tag @a[r=1] add rl_joining",
-							"/execute @e[type=cr:cmd,name=rl_generator] ~~~ function rl/hard/make_game"
+							"/execute as @initiator at @s run tag @a[r=1] add rl_joining",
+							"/execute as @e[type=cr:cmd,name=rl_generator] at @s run function rl/hard/make_game"
 						]
 					}
 				]

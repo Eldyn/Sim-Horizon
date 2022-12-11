@@ -1,3 +1,4 @@
+import {world} from '@minecraft/server'
 /**
  * Converts an Arabic number to a Roman numeral.
  *
@@ -62,3 +63,16 @@ export function unVanishString(string) { return string.replace(/§/g,"") };
 * @return {Number} clamped value 
 */
 export function clamp(n, min, max) { return n < min ? min : n > max ? max : n };  
+
+export function getScore(player, objective, usesNaN = false) {
+  try {
+      const score = world.scoreboard
+          .getObjective(objective)
+          .getScore(player.scoreboard);
+      return score;
+  } catch(err) {
+    console.warn(err)
+      if (!usesNaN) return 0;
+      else return NaN
+  }
+}

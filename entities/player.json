@@ -297,7 +297,7 @@
 				},
 				"run_command": {
 					"command": [
-						"execute @s ~~~ function general_reset"
+						"execute as @s at @s run function general_reset"
 					]
 				}
 			},
@@ -332,7 +332,7 @@
 					"command": [
 						"effect @s instant_damage 1 0 true",
 						"playsound random.glass @a[r=7] ~ ~ ~ 1 0.35 1",
-						"execute @s ^ ^ ^4 event entity @p remove_parry"
+						"execute as @s anchored eyes positioned ^ ^ ^4 run event entity @p remove_parry"
 					]
 				}
 			},
@@ -410,7 +410,7 @@
 			"cooldown_pit": {
 				"run_command": {
 					"command": [
-						"execute @s ~~~ function pit/second"
+						"execute as @s at @s run function pit/second"
 					]
 				}
 			}

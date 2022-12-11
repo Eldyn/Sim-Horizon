@@ -16,25 +16,25 @@
 					{
 						"name": "§3Comuni",
 						"commands": [
-							"/execute @initiator ~~~ function collection/summon_c"
+							"/execute as @initiator at @s run function collection/summon_c"
 						]
 					},
 					{
 						"name": "§gRare",
 						"commands": [
-							"/execute @initiator ~~~ function collection/summon_r"
+							"/execute as @initiator at @s run function collection/summon_r"
 						]
 					},
 					{
 						"name": "§dEpiche",
 						"commands": [
-							"/execute @initiator ~~~ function collection/summon_e"
+							"/execute as @initiator at @s run function collection/summon_e"
 						]
 					},
 					{
 						"name": "§fLeggendarie",
 						"commands": [
-							"/execute @initiator ~~~ function collection/summon_l"
+							"/execute as @initiator at @s run function collection/summon_l"
 						]
 					}
 				]

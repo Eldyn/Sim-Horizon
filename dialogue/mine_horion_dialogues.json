@@ -1,5 +1,5 @@
 {
-	"format_version": "1.17.40",
+	"format_version": "1.19.50",
 	"minecraft:npc_dialogue": {
 		"scenes": [
 			{
@@ -31,7 +31,7 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:horion,c=1] @s horion_about"
+							"/execute as @initiator at @s run dialogue open @e[type=cr:horion,c=1] @s horion_about"
 						]
 					},
 					{
@@ -43,7 +43,7 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:horion,c=1] @s horion_skin"
+							"/execute as @initiator at @s run dialogue open @e[type=cr:horion,c=1] @s horion_skin"
 						]
 					},
 					{
@@ -55,7 +55,7 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:horion,c=1] @s horion_about"
+							"/execute as @initiator at @s run dialogue open @e[type=cr:horion,c=1] @s horion_about"
 						]
 					},
 					{
@@ -67,7 +67,7 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:horion,c=1] @s horion_about_spamton"
+							"/execute as @initiator at @s run dialogue open @e[type=cr:horion,c=1] @s horion_about_spamton"
 						]
 					},
 					{
@@ -89,23 +89,23 @@
 				"buttons":[
 					{ "name": {"rawtext":[{"rawtext":"§l<"}]},"commands":[]},
 					{ "name": {"rawtext":[{"rawtext":"\uF000"}]},"commands":[
-						"/execute @initiator[tag=!a1] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a1_buy",
-						"/execute @initiator[tag=a1] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a1"
+						"/execute as @initiator[tag=!a1] at @s run dialogue open @e[c=1,type=cr:horion] @s horion_a1_buy",
+						"/execute as @initiator[tag=a1] at @s run dialogue open @e[c=1,type=cr:horion] @s horion_a1"
 					]},
 					{ "name": {"rawtext":[{"rawtext":"\uF000"}]},"commands":[
-						"/execute @initiator[tag=!a2] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a2_buy",
-						"/execute @initiator[tag=a2] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a2"
+						"/execute as @initiator[tag=!a2] at @s run dialogue open @e[c=1,type=cr:horion] @s horion_a2_buy",
+						"/execute as @initiator[tag=a2] at @s run dialogue open @e[c=1,type=cr:horion] @s horion_a2"
 					]},
 					{ "name": {"rawtext":[{"rawtext":"\uF000"}]},"commands":[
-						"/execute @initiator[tag=!a3] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a3_buy",
-						"/execute @initiator[tag=a3] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a3"
+						"/execute as @initiator[tag=!a3] at @s run dialogue open @e[c=1,type=cr:horion] @s horion_a3_buy",
+						"/execute as @initiator[tag=a3] at @s run dialogue open @e[c=1,type=cr:horion] @s horion_a3"
 					]},
 					{ "name": {"rawtext":[{"rawtext":"\uF000"}]},"commands":[
-						"/execute @initiator[tag=!a4] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a4_buy",
-						"/execute @initiator[tag=a4] ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_a4"
+						"/execute as @initiator[tag=!a4] at @s run dialogue open @e[c=1,type=cr:horion] @s horion_a4_buy",
+						"/execute as @initiator[tag=a4] at @s run dialogue open @e[c=1,type=cr:horion] @s horion_a4"
 					]},
 					{ "name": {"rawtext":[{"rawtext":"§l>"}]},"commands":[
-						"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_ability_p2"
+						"/execute as @initiator at @s run dialogue open @e[c=1,type=cr:horion] @s horion_ability_p2"
 					]}
 				]
 			},
@@ -155,7 +155,7 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_hub"
+							"/execute as @initiator at @s run dialogue open @e[c=1,type=cr:horion] @s horion_hub"
 						]
 					}
 				]
@@ -194,7 +194,7 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:horion] @s horion_hub"
+							"/execute as @initiator at @s run dialogue open @e[c=1,type=cr:horion] @s horion_hub"
 						]
 					}
 				]

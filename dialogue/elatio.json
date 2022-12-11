@@ -1,5 +1,5 @@
 {
-	"format_version": "1.17.40",
+	"format_version": "1.19.50",
 	"minecraft:npc_dialogue": {
 		"scenes": [
 			{
@@ -25,7 +25,7 @@
 					{
 						"name": "Hub",
 						"commands": [
-							"/execute @initiator ~ ~ ~ function tp/hub"
+							"/execute as @initiator run function tp/hub"
 						]
 					},
 					{
@@ -37,19 +37,19 @@
 							]
 						},
 						"commands": [
-							"/execute @initiator ~ ~ ~ function tp/mine"
+							"/execute as @initiator run function tp/mine"
 						]
 					},
 					{
 						"name": "Minigames",
 						"commands": [
-							"/execute @initiator ~ ~ ~ function tp/minigames"
+							"/execute as @initiator run function tp/minigames"
 						]
 					},
 					{
 						"name": "Pit",
 						"commands": [
-							"/execute @initiator ~ ~ ~ function tp/pit"
+							"/execute as @initiator run function tp/pit"
 						]
 					}
 				]

@@ -1,4 +1,4 @@
-execute @e[type=cr:cmd,name=cr_counter] ~ ~ ~ function cr/end_game
+execute as @e[type=cr:cmd,name=cr_counter] at @s run function cr/end_game
 kill @e[name=cr_empty]
 kill @e[name=cr_generator]
 summon cr:cmd cr_generator 1999 201 2013

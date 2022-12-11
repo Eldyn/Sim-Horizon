@@ -1,16 +1,16 @@
-execute @s ~~~ detect ~~~ air -1 scoreboard players set @s explosion_data 0
-execute @s ~~~ detect ~~~ cr:l1 -1 scoreboard players set @s explosion_data 1
-execute @s ~~~ detect ~~~ cr:l2 -1 scoreboard players set @s explosion_data 2
-execute @s ~~~ detect ~~~ cr:l3 -1 scoreboard players set @s explosion_data 3
-execute @s ~~~ detect ~~~ cr:l4 -1 scoreboard players set @s explosion_data 4
-execute @s ~~~ detect ~~~ cr:mine_l1_com1 -1 scoreboard players set @s explosion_data 11
-execute @s ~~~ detect ~~~ cr:mine_l2_com1 -1 scoreboard players set @s explosion_data 13
-execute @s ~~~ detect ~~~ cr:mine_l3_com1 -1 scoreboard players set @s explosion_data 15
-execute @s ~~~ detect ~~~ cr:mine_l4_com1 -1 scoreboard players set @s explosion_data 17
-execute @s ~~~ detect ~~~ cr:mine_l1_com2 -1 scoreboard players set @s explosion_data 12
-execute @s ~~~ detect ~~~ cr:mine_l2_com2 -1 scoreboard players set @s explosion_data 14
-execute @s ~~~ detect ~~~ cr:mine_l3_com2 -1 scoreboard players set @s explosion_data 16
-execute @s ~~~ detect ~~~ cr:mine_l4_com2 -1 scoreboard players set @s explosion_data 18
-execute @s ~~~ detect ~~~ cr:mine_l1_rare -1 scoreboard players set @s explosion_data 19
-execute @s ~~~ detect ~~~ cr:mine_l2_rare -1 scoreboard players set @s explosion_data 20
-execute @s ~~~ detect ~~~ cr:mine_l3_rare -1 scoreboard players set @s explosion_data 21
+execute as @s positioned as @s if block ~~~ air -1 run scoreboard players set @s explosion_data 0
+execute as @s positioned as @s if block ~~~ cr:l1 -1 run scoreboard players set @s explosion_data 1
+execute as @s positioned as @s if block ~~~ cr:l2 -1 run scoreboard players set @s explosion_data 2
+execute as @s positioned as @s if block ~~~ cr:l3 -1 run scoreboard players set @s explosion_data 3
+execute as @s positioned as @s if block ~~~ cr:l4 -1 run scoreboard players set @s explosion_data 4
+execute as @s positioned as @s if block ~~~ cr:mine_l1_com1 -1 run scoreboard players set @s explosion_data 11
+execute as @s positioned as @s if block ~~~ cr:mine_l2_com1 -1 run scoreboard players set @s explosion_data 13
+execute as @s positioned as @s if block ~~~ cr:mine_l3_com1 -1 run scoreboard players set @s explosion_data 15
+execute as @s positioned as @s if block ~~~ cr:mine_l4_com1 -1 run scoreboard players set @s explosion_data 17
+execute as @s positioned as @s if block ~~~ cr:mine_l1_com2 -1 run scoreboard players set @s explosion_data 12
+execute as @s positioned as @s if block ~~~ cr:mine_l2_com2 -1 run scoreboard players set @s explosion_data 14
+execute as @s positioned as @s if block ~~~ cr:mine_l3_com2 -1 run scoreboard players set @s explosion_data 16
+execute as @s positioned as @s if block ~~~ cr:mine_l4_com2 -1 run scoreboard players set @s explosion_data 18
+execute as @s positioned as @s if block ~~~ cr:mine_l1_rare -1 run scoreboard players set @s explosion_data 19
+execute as @s positioned as @s if block ~~~ cr:mine_l2_rare -1 run scoreboard players set @s explosion_data 20
+execute as @s positioned as @s if block ~~~ cr:mine_l3_rare -1 run scoreboard players set @s explosion_data 21 

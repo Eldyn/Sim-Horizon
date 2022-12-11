@@ -1,9 +1,9 @@
 kill @e[type=item,r=1]
 scoreboard players operation @s rps_points = @p[tag=rps_p1] rps_points
 scoreboard players operation @s rps_points -= @p[tag=rps_p2] rps_points
-execute @s[scores={rps_points=0}] ~ ~ ~ function rps/results/tie
-execute @s[scores={rps_points=..-1}] ~ ~ ~ function rps/results/p2_win
-execute @s[scores={rps_points=1..}] ~ ~ ~ function rps/results/p1_win
+execute as @s[scores={rps_points=0}] at @s run function rps/results/tie
+execute as @s[scores={rps_points=..-1}] at @s run function rps/results/p2_win
+execute as @s[scores={rps_points=1..}] at @s run function rps/results/p1_win
 tp @a[tag=rps_player] 1082 0 1064
 tag @a remove rps_p1
 tag @a remove rps_p2

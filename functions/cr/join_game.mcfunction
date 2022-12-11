@@ -6,6 +6,6 @@ say @a[tag=cr_joining]
 tag @a[dy=4] remove searching
 effect @a[dy=4] levitation 3 3 true
 ability @a[dy=4] mayfly true
-execute @e[type=cr:cmd,name=cr_generator] ~16 ~18 ~24 tp @a[tag=cr_joining,tag=cr_blue] ~ ~3 ~
-execute @e[type=cr:cmd,name=cr_generator] ~16 ~18 ~24 tp @a[tag=cr_joining,tag=cr_red] ~23 ~3 ~
+execute as @e[type=cr:cmd,name=cr_generator] positioned ~16 ~18 ~24 run tp @a[tag=cr_joining,tag=cr_blue] ~ ~3 ~
+execute as @e[type=cr:cmd,name=cr_generator] positioned ~16 ~18 ~24 run tp @a[tag=cr_joining,tag=cr_red] ~23 ~3 ~
 tag @a remove cr_joining

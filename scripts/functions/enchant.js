@@ -1,5 +1,5 @@
 export class Enchant {
-    constructor(name, weight, perLevelWeight, maxLevel, type, onTrigger) {
+    constructor(name, weight, perLevelWeight, maxLevel, type, onTrigger, mixedType, mixedTrigger) {
         this.name = name;
         this.weight = weight;
         this.perLevelWeight = perLevelWeight
@@ -7,9 +7,11 @@ export class Enchant {
         this.type = type;
         this.onTrigger = onTrigger;
         this.level = 0;
+        this.mixedType = mixedType;
+        this.mixedTrigger = mixedTrigger;
         this.equals = function(other) {
           return other.name === this.name
-        }
+        };
     };
     rollLevel() {
         // calculate the total weight using Array.reduce()
@@ -28,7 +30,11 @@ export class Enchant {
         }
     }
     
-    runEnchant() {
-        this.onTrigger(this.level, this.type)
+    runEnchant(player, item = undefined) {
+        this.onTrigger(this, player, item)
+    }
+
+    runMixedEnchant(player, item = undefined) {
+        this.mixedTrigger(this, player, item)
     }
 }

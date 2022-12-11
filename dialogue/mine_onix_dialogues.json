@@ -1,5 +1,5 @@
 {
-	"format_version": "1.17.40",
+	"format_version": "1.19.50",
 	"minecraft:npc_dialogue": {
 		"scenes": [{
 			//main onix scene
@@ -8,15 +8,15 @@
 				"text": {"rawtext": [{"text": "NPC_MainScreen"},{"translate": "ui.onix.hub"},{"with": ["\n"]}]},
 				"buttons": [
 					{ "name": {"rawtext":[{"translate": "ui.onix.button.roll"}]},"commands": [
-						"/execute @initiator[scores={i_mine_pickaxe=-2000}] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe",
-						"/execute @initiator[tag=mine_clotus] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe",
-						"/execute @initiator[scores={i_mine_pickaxe=0..},tag=!mine_clotus] ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe_pay"
+						"/execute as @initiator[scores={i_mine_pickaxe=-2000}] at @s run dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe",
+						"/execute as @initiator[tag=mine_clotus] at @s run dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe",
+						"/execute as @initiator[scores={i_mine_pickaxe=0..},tag=!mine_clotus] at @s run dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe_pay"
 					]},
 					{ "name": {"rawtext": [{"translate": "ui.onix.button.about"}]},"commands": [
-							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s onix_about"
+							"/execute as @initiator at @s run dialogue open @e[type=cr:onix,c=1] @s onix_about"
 					]},
 					{ "name": {"rawtext": [{"translate": "ui.onix.button.about_spamton"}]},"commands": [
-							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s onix_about_spamton"
+							"/execute as @initiator at @s run dialogue open @e[type=cr:onix,c=1] @s onix_about_spamton"
 					]},
 					{ "name": {"rawtext": [{"translate": "ui.onix.button.quit"}]},"commands": []}
 				]
@@ -28,7 +28,7 @@
 				"text": {"rawtext": [{"text": "NPC_FullScreen"},{"translate": "ui.onix.about"},{"text": "\n"},{"translate": "ui.onix.about1"},{"text": "\n"},{"translate": "ui.onix.about2"}]},
 				"buttons": [
 					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [
-						"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
+						"/execute as @initiator at @s run dialogue open @e[c=1,type=cr:onix] @s onix_hub"
 					]}
 				]
 			},
@@ -39,7 +39,7 @@
 				"text": {"rawtext": [{"text": "NPC_FullScreen"},{"translate": "ui.onix.about_spamton"},{"with": ["\n"]}]},
 				"buttons": [
 					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [
-						"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
+						"/execute as @initiator at @s run dialogue open @e[c=1,type=cr:onix] @s onix_hub"
 					]}
 				]
 			},
@@ -62,11 +62,11 @@
 				"text": {"rawtext": [{"text": "NPC_FullScreen"},{"translate": "ui.onix.roll_pickaxe_pay"},{"with": ["\n"]}]},
 				"buttons": [
 					{ "name": {"rawtext": [{"translate": "ui.onix.button.pickaxe_pay"}]},"commands": [
-							"/execute @initiator ~ ~ ~ dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe_pay_confirm"
+							"/execute as @initiator at @s run dialogue open @e[type=cr:onix,c=1] @s roll_pickaxe_pay_confirm"
 						]
 					},
 					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [
-							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
+							"/execute as @initiator at @s run dialogue open @e[c=1,type=cr:onix] @s onix_hub"
 						]
 					}
 				]
@@ -79,12 +79,12 @@
 				"buttons": [
 					{ "name": {"rawtext": [{"translate": "ui.onix.confirm"}]},"commands": [
 							"/tag @initiator[scores={bal=700..}] add give_pickaxe",
-							"/execute @initiator[scores={bal=700..}] ~ ~ ~ setblock 1252 53 1220 cr:pickaxe_block",
+							"/execute as @initiator[scores={bal=700..}] at @s run setblock 1252 53 1220 cr:pickaxe_block",
 							"/scoreboard players remove @initiator[scores={bal=700..}] bal 700"
 						]
 					},
 					{ "name": {"rawtext": [{"translate": "ui.back"}]},"commands": [
-							"/execute @initiator ~~~ dialogue open @e[c=1,type=cr:onix] @s onix_hub"
+							"/execute as @initiator at @s run dialogue open @e[c=1,type=cr:onix] @s onix_hub"
 						]
 					}
 				]
